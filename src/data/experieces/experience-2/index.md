@@ -1,9 +1,9 @@
 ---
 category: 'experiences'
-company: 'Aizoon Reply'
-position: 'UI/UX Designer'
-startDate: 'Jan 2011'
-endDate: 'May 2013'
+company: 'Knowru'
+position: 'Software Engineer, Intern'
+startDate: 'Jul 2019'
+endDate: 'Sep 2019'
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

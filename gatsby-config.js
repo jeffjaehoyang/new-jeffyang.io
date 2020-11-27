@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby.JS`,
-    description: `Gatsby Markdown Personal Website Starter, using Typescript, Styled Components, Tailwindcss and Framer Motion.`,
-    author: `Saimir Kapaj`
+    title: `JEFF YANG`,
+    description: `A personal blog by Jeff Yang`,
+    author: `Jeff Yang`
   },
   plugins: [
     `gatsby-plugin-typescript`,
@@ -24,15 +24,13 @@ module.exports = {
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        plugins: [
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              maxWidth: 768,
-              linkImagesToOriginal: false
-            }
+        plugins: [{
+          resolve: 'gatsby-remark-images',
+          options: {
+            maxWidth: 768,
+            linkImagesToOriginal: false
           }
-        ]
+        }]
       }
     },
     `gatsby-transformer-sharp`,

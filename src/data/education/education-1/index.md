@@ -1,9 +1,12 @@
 ---
 category: 'education'
-university: 'Columbia University'
-degree: 'Bachelor'
-startDate: 'Oct 2005'
-endDate: 'Jul 2008'
+university: 'Northwestern University'
+degree: "Bachelor's Degree"
+startDate: 'Sep 2015'
+endDate: 'Mar 2022 (Expected)'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+**B.A. in Computer Science**
+
+GPA 3.86 / 4.00
+
