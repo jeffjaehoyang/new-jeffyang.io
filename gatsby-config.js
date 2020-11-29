@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `JEFF YANG`,
+    title: `Jeff Yang`,
     description: `A personal blog by Jeff Yang`,
     author: `Jeff Yang`
   },
@@ -25,12 +25,26 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [{
-          resolve: 'gatsby-remark-images',
-          options: {
-            maxWidth: 768,
-            linkImagesToOriginal: false
-          }
-        }]
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: 'language-',
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: false,
+              noInlineHighlight: false
+            }
+          },
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 768,
+              linkImagesToOriginal: false
+            }
+          },
+          {
+            resolve: 'gatsby-remark-reading-time',
+          },
+        ]
       }
     },
     `gatsby-transformer-sharp`,
@@ -57,6 +71,6 @@ module.exports = {
         tailwind: true,
         purgeOnly: [`src/assets/styles/global.css`]
       }
-    }
+    },
   ]
 };

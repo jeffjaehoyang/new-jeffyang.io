@@ -6,7 +6,7 @@ export interface StyledProps {
 }
 
 export const InfoBlock = styled.div<StyledProps>`
-  ${tw`flex flex-col my-4 mx-3 p-4 bg-white rounded-lg border border-gray-300`};
+  ${tw`flex flex-col my-4 mx-3 p-4 bg-white rounded-lg border border-gray-300 text-indigo-900`};
   ${({ center }) => center && tw`items-center`};
 `;
 
@@ -24,4 +24,16 @@ export const Title = styled.h3`
 
 export const Content = styled.p`
   ${tw`mt-1`};
+`;
+
+export const Tags = styled.div`
+  ${tw`pt-4 mt-auto`}
+`;
+
+export const Tag = styled.span`
+  ${tw`text-xs text-indigo-900 border border-teal-400 rounded-full px-2 py-1 mr-2`}
+`;
+
+export const Date = styled.h3`
+  ${tw`pt-4 text-xs text-indigo-900`};
 `;

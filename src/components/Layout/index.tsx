@@ -7,6 +7,7 @@ import Footer from 'components/Footer';
 import Newsletter from 'components/Newsletter';
 
 import 'assets/styles/global.css';
+import 'assets/styles/prismjs/syntax_theme.css';
 import GlobalStyles from 'assets/styles/globalStyles';
 import * as Styled from './styles';
 
@@ -38,7 +39,6 @@ const Layout: React.FC<Props> = ({ children }) => {
             transition={{ delay: 0.2 }}
           >
             {children}
-            {/* <Newsletter /> */}
             <Footer />
           </motion.div>
         </Styled.Layout>

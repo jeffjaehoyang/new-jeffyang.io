@@ -1,23 +1,28 @@
 import React from 'react';
 
-import Icon, { IconProps } from 'components/ui/Icon';
-
 import * as Styled from './styles';
 
 interface Props extends Styled.StyledProps {
   title: string;
-  content: React.ReactNode;
-  icon: IconProps;
+  description: string;
+  tags: Array<string>;
+  date: string;
+  readingTime: string;
 }
 
-const InfoBlock: React.FC<Props> = ({ icon, title, content, center }) => (
+const InfoBlock: React.FC<Props> = ({ title, description, tags, date, center, readingTime }) => (
   <Styled.InfoBlock center={center}>
-    <Styled.Icon>
-      <Icon icon={icon} />
-    </Styled.Icon>
     <Styled.Wrapper center={center}>
       <Styled.Title>{title}</Styled.Title>
-      <Styled.Content>{content}</Styled.Content>
+      <Styled.Content>{description}</Styled.Content>
+      <Styled.Date>
+        {date} • {readingTime}
+      </Styled.Date>
+      <Styled.Tags>
+        {tags.map((item) => (
+          <Styled.Tag key={item}>{item}</Styled.Tag>
+        ))}
+      </Styled.Tags>
     </Styled.Wrapper>
   </Styled.InfoBlock>
 );

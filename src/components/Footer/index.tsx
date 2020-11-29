@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Container from 'components/ui/Container';
+import Icon, { IconProps } from 'components/ui/Icon';
 
 import * as Styled from './styles';
 
@@ -8,18 +9,11 @@ const Footer: React.FC = () => (
   <Styled.Footer>
     <Container>
       <Styled.Links>
-        <Styled.Link href="/" rel="noreferrer noopener" target="_blank">
-          GitHub
+        <Styled.Link href="https://github.com/jeffjaehoyang" rel="noreferrer noopener" target="_blank">
+          <Icon icon={['fab', 'github']} style={{ height: '25', width: '25' }} />
         </Styled.Link>
-        <Styled.Link
-          href="https://github.com/SaimirKapaj/gatsby-markdown-typescript-personal-website"
-          rel="noreferrer noopener"
-          target="_blank"
-        >
-          Twitter
-        </Styled.Link>
-        <Styled.Link href="/" rel="noreferrer noopener" target="_blank">
-          Behance
+        <Styled.Link href="https://www.linkedin.com/in/jaeho-yang/" rel="noreferrer noopener" target="_blank">
+          <Icon icon={['fab', 'linkedin']} style={{ height: '25', width: '25' }} />
         </Styled.Link>
       </Styled.Links>
     </Container>

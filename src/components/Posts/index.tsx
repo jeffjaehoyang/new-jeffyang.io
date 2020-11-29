@@ -16,6 +16,7 @@ interface Post {
     id: string;
     fields: {
       slug: string;
+      readingTime: any;
     };
     frontmatter: {
       title: string;
@@ -50,6 +51,9 @@ const Posts: React.FC = () => {
             html
             fields {
               slug
+              readingTime {
+                text
+              }
             }
             frontmatter {
               title
@@ -80,20 +84,22 @@ const Posts: React.FC = () => {
         {posts.map((item) => {
           const {
             id,
-            fields: { slug },
+            fields: { slug, readingTime },
             frontmatter: { title, cover, description, date, tags }
           } = item.node;
 
           return (
             <Styled.Post key={id}>
               <Link to={slug}>
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 1 }}>
+                <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 1 }}>
                   <Styled.Card>
                     <Styled.Image>
                       <Img fluid={cover.childImageSharp.fluid} alt={title} />
                     </Styled.Image>
                     <Styled.Content>
-                      <Styled.Date>{date}</Styled.Date>
+                      <Styled.Date>
+                        {date} • {readingTime.text}
+                      </Styled.Date>
                       <Styled.Title>{title}</Styled.Title>
                       <Styled.Description>{description}</Styled.Description>
                     </Styled.Content>

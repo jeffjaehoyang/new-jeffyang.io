@@ -1,7 +1,11 @@
 const path = require(`path`);
-const { createFilePath } = require(`gatsby-source-filesystem`);
+const {
+  createFilePath
+} = require(`gatsby-source-filesystem`);
 
-exports.onCreateWebpackConfig = ({ actions }) => {
+exports.onCreateWebpackConfig = ({
+  actions
+}) => {
   actions.setWebpackConfig({
     resolve: {
       modules: [path.resolve(__dirname, `src`), `node_modules`]
@@ -9,11 +13,20 @@ exports.onCreateWebpackConfig = ({ actions }) => {
   });
 };
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions;
+exports.onCreateNode = ({
+  node,
+  actions,
+  getNode
+}) => {
+  const {
+    createNodeField
+  } = actions;
 
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode });
+    const value = createFilePath({
+      node,
+      getNode
+    });
     createNodeField({
       name: `slug`,
       node,
@@ -22,8 +35,13 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 };
 
-exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions;
+exports.createPages = async ({
+  graphql,
+  actions
+}) => {
+  const {
+    createPage
+  } = actions;
   const blogPostTemplate = path.resolve(`src/templates/BlogPost/index.tsx`);
 
   const res = await graphql(`
@@ -36,6 +54,9 @@ exports.createPages = async ({ graphql, actions }) => {
           node {
             fields {
               slug
+              readingTime {
+                text
+              }
             }
             frontmatter {
               title
@@ -57,6 +78,7 @@ exports.createPages = async ({ graphql, actions }) => {
       component: blogPostTemplate,
       context: {
         slug: `${post.node.fields.slug}`,
+        readingTime: `${post.node.fields.readingTime.text}`,
         previous,
         next
       }

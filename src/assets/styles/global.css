@@ -4,3 +4,7 @@
 /* purgecss end ignore */
 
 @import 'tailwindcss/utilities';
+
+.markdown img {
+  border-radius: 0.3rem;
+}

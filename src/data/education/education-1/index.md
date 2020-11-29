@@ -10,3 +10,5 @@ endDate: 'Mar 2022 (Expected)'
 
 GPA 3.86 / 4.00
 
+Resident Assistant 2019-2020
+
