@@ -16,3 +16,7 @@ export const Links = styled.div`
 export const Link = styled.a`
   ${tw`text-indigo-900 hover:text-indigo-600 mx-2`};
 `;
+
+export const Copyright = styled.div`
+  ${tw`flex justify-center w-full py-4`}
+`;

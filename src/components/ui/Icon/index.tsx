@@ -9,7 +9,8 @@ import {
   faBullhorn,
   faMapMarkerAlt,
   faPhone,
-  faPaperPlane
+  faPaperPlane,
+  faLink
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon, FontAwesomeIconProps } from '@fortawesome/react-fontawesome';
 
@@ -25,7 +26,8 @@ library.add(
   faBullhorn,
   faMapMarkerAlt,
   faPhone,
-  faPaperPlane
+  faPaperPlane,
+  faLink
 );
 
 export type IconProps = FontAwesomeIconProps['icon'];

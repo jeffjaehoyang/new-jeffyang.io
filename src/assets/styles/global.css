@@ -8,3 +8,11 @@
 .markdown img {
   border-radius: 0.3rem;
 }
+
+.markdown code::before {
+  content: "";
+}
+
+.markdown code::after {
+  content: "";
+}

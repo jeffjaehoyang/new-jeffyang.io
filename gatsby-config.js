@@ -47,6 +47,13 @@ module.exports = {
         ]
       }
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-170622682-1',
+        head: true,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -58,7 +65,7 @@ module.exports = {
         background_color: `#81e6d9`,
         theme_color: `#81e6d9`,
         display: `minimal-ui`,
-        icon: `src/assets/images/gatsby-icon.png`
+        icon: `src/assets/images/icon.png`
       }
     },
     `gatsby-plugin-offline`,

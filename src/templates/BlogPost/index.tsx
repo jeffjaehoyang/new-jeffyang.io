@@ -10,6 +10,7 @@ import MarkdownHtml from 'components/utils/MarkdownHtml';
 import Commento from 'components/Commento';
 
 import * as Styled from './styles';
+import Bio from 'components/Bio';
 
 interface Post {
   html: React.ReactNode;
@@ -37,7 +38,6 @@ interface Props {
 const BlogPost: React.FC<Props> = ({ data, pageContext }) => {
   const post = data.markdownRemark;
   const { previous, next } = pageContext;
-  console.log(pageContext);
 
   return (
     <Layout>
@@ -49,6 +49,7 @@ const BlogPost: React.FC<Props> = ({ data, pageContext }) => {
           readingTime={post.fields.readingTime.text}
         />
         <MarkdownHtml content={post.html} />
+        <Bio />
         <Styled.Links>
           <span>
             {previous && (

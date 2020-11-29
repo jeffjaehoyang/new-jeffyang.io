@@ -6,6 +6,8 @@ import Banner from 'components/ui/Banner';
 import { SectionTitle } from 'helpers/definitions';
 
 interface SectionHeroBanner extends SectionTitle {
+  title: string;
+  subtitle: string;
   content: string;
   linkTo: string;
   linkText: string;

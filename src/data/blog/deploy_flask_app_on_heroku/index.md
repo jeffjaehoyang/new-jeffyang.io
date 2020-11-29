@@ -2,7 +2,7 @@
 category: 'blog'
 cover: './heroku_flask.png'
 title: 'Go Live With Your Flask Application on Heroku'
-description: 'how to deploy a Flask web application on Heroku'
+description: 'How to deploy a Flask web application on Heroku'
 date: '2019-11-01'
 tags: ['Web Development']
 published: true

@@ -12,7 +12,7 @@
 */
 pre[class*="language-"],
 code[class*="language-"] {
-  color: #edf7eb;
+  color: #5c6e74;
   font-size: 13px;
   text-shadow: none;
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
@@ -29,7 +29,6 @@ code[class*="language-"] {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
-  border-radius: 0.3rem;
 }
 pre[class*="language-"]::selection,
 code[class*="language-"]::selection,
@@ -48,7 +47,7 @@ pre[class*="language-"] {
   padding: 1em;
   margin: .5em 0;
   overflow: auto;
-  background: #011827;
+  background: #f9fafc;
 }
 :not(pre) > code[class*="language-"] {
   padding: .1em .3em;
@@ -66,10 +65,10 @@ pre[class*="language-"] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: #73878b;
+  color: #93a1a1;
 }
 .token.punctuation {
-  color: #999999;
+  color: #5c6e74;
 }
 .token.property,
 .token.tag,
@@ -78,7 +77,7 @@ pre[class*="language-"] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-  color: #ca5c73;
+  color: #990055;
 }
 .token.selector,
 .token.attr-name,
@@ -86,23 +85,23 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-  color: #aed87d;
+  color: #669900;
 }
 .token.operator,
 .token.entity,
 .token.url,
 .language-css .token.string,
 .style .token.string {
-  color: #edf7eb;
-  background: #011827;
+  color: #5c6e74;
+  background: #f9fafc;
 }
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-  color: #e9a8c1;
+  color: #0077aa;
 }
 .token.function {
-  color: #7d9fe5;
+  color: #dd4a68;
 }
 .token.regex,
 .token.important,
@@ -135,22 +134,10 @@ pre[class*="language-"] > code[class*="language-"] {
   right: 0;
   padding: inherit 0;
   margin-top: 1em;
-  background: #022a4a;
-  box-shadow: inset 5px 0 0 #e9a8c1;
+  background: #f7ebc6;
+  box-shadow: inset 5px 0 0 #f7d87c;
   z-index: 0;
   pointer-events: none;
   line-height: inherit;
   white-space: pre;
-}
-.gatsby-highlight-code-line {
-  background-color: #022a4a;
-  display: block;
-  margin-right: -1em;
-  margin-left: -1em;
-  padding-right: 1em;
-  padding-left: 0.75em;
-  border-left: 0.25em solid #e9a8c1;
-}
-.gatsby-highlight-code-line .token.operator {
-  background-color: #022a4a;
 }
