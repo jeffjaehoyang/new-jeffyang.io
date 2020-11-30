@@ -8,3 +8,7 @@ export const Skills = styled.div`
 export const Skill = styled.div`
   ${tw`w-full sm:w-1/2`};
 `;
+
+export const Image = styled.figure`
+  ${tw`w-full`};
+`;

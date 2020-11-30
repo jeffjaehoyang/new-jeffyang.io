@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Container from 'components/ui/Container';
 import TitleSection from 'components/ui/TitleSection';
 import ProgressBar from 'components/ui/ProgressBar';
+import Img from 'gatsby-image';
 
 import { SectionTitle } from 'helpers/definitions';
 
@@ -20,7 +21,7 @@ interface Skill {
 }
 
 const Skills: React.FC = () => {
-  const { markdownRemark, allMarkdownRemark } = useStaticQuery(graphql`
+  const { markdownRemark, placeholderImage } = useStaticQuery(graphql`
     query {
       markdownRemark(frontmatter: { category: { eq: "skills section" } }) {
         frontmatter {
@@ -28,14 +29,10 @@ const Skills: React.FC = () => {
           subtitle
         }
       }
-      allMarkdownRemark(filter: { frontmatter: { category: { eq: "skills" } } }, sort: { fields: fileAbsolutePath }) {
-        edges {
-          node {
-            id
-            frontmatter {
-              title
-              percentage
-            }
+      placeholderImage: file(relativePath: { eq: "tech_stack.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 780) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -43,13 +40,14 @@ const Skills: React.FC = () => {
   `);
 
   const sectionTitle: SectionTitle = markdownRemark.frontmatter;
-  const skills: Skill[] = allMarkdownRemark.edges;
+  console.log('place', placeholderImage.childImageSharp.fluid);
 
   return (
     <Container section>
       <TitleSection title={sectionTitle.title} subtitle={sectionTitle.subtitle} center />
-      <Styled.Skills>
-        {skills.map((item) => {
+      <Styled.Image>
+        <Img fluid={placeholderImage.childImageSharp.fluid} alt={sectionTitle.title} />
+        {/* {skills.map((item) => {
           const {
             id,
             frontmatter: { title, percentage }
@@ -60,8 +58,8 @@ const Skills: React.FC = () => {
               <ProgressBar title={title} percentage={percentage} />
             </Styled.Skill>
           );
-        })}
-      </Styled.Skills>
+        })} */}
+      </Styled.Image>
     </Container>
   );
 };

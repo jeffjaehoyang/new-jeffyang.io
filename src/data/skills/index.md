@@ -1,5 +1,5 @@
 ---
 category: 'skills section'
 title: 'Skills'
-subtitle: 'Technologies & Tools'
+subtitle: "Technologies I've Worked With"
 ---

@@ -5,7 +5,7 @@ interface Props {
 }
 
 const MarkdownHtml: React.FC<Props> = ({ content }) => (
-  <span
+  <div
     className="prose max-w-full markdown"
     dangerouslySetInnerHTML={{
       __html: content
