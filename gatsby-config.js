@@ -24,7 +24,8 @@ module.exports = {
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        plugins: [{
+        plugins: [
+          {
             resolve: `gatsby-remark-prismjs`,
             options: {
               classPrefix: 'language-',
@@ -42,8 +43,14 @@ module.exports = {
             }
           },
           {
-            resolve: 'gatsby-remark-reading-time',
+            resolve: 'gatsby-remark-reading-time'
           },
+          {
+            resolve: 'gatsby-remark-copy-linked-files',
+            options: {
+              ignoreFileExtensions: [`png`, `jpg`, `jpeg`, `bmp`, `tiff`]
+            }
+          }
         ]
       }
     },
@@ -51,8 +58,8 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: 'UA-170622682-1',
-        head: true,
-      },
+        head: true
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -78,6 +85,6 @@ module.exports = {
         tailwind: true,
         purgeOnly: [`src/assets/styles/global.css`]
       }
-    },
+    }
   ]
 };

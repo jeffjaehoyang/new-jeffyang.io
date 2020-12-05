@@ -8,6 +8,7 @@
 /* purgecss start ignore */
 .markdown img {
   border-radius: 0.3rem;
+  width: 100%;
 }
 
 .markdown code::before {
