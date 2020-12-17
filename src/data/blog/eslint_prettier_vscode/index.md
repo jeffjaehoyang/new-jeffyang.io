@@ -180,4 +180,4 @@ You should be able to see that ESLint and Prettier are properly working! The red
 
 ![A GIF of ESLint and Prettier working in VS Code with Error Lens](./eslint_prettier_with_errorlens.gif)
 
-Voila! There we have it! ESLint and Prettier working beautifully with VS Code, and long gone are your worries of having to scratch your head over how to create a codebase with uniform code style. With Error Lens added to that combination, your day to day coding task should certainly be an experiencee! I hope this blog post helped you get started with using ESLint and Prettier for your JavaScript project, but please feel free to explore further by visiting their respective documentation.
+Voila! There we have it! ESLint and Prettier working beautifully with VS Code, and long gone are your worries of having to scratch your head over how to create a codebase with uniform code style. With Error Lens added to that combination, your day to day coding task should certainly be an experience! I hope this blog post helped you get started with using ESLint and Prettier for your JavaScript project, but please feel free to explore further by visiting their respective documentation.
