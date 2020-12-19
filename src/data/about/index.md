@@ -17,7 +17,7 @@ _I am currently a student studying computer science at **Northwestern University
 
 ### What kinds of professional experience do I have?
 
-_I was a software engineering intern at **Knowru**, **Fumi**, and **Esri**. I worked on the front-end and back-end of various projects, using technologies such as **React.js, Redux, Ember.js, Angular.js, Django, Flask, AWS, GraphQL, and PostreSQL**._
+_I was previously a software engineering intern at [Knowru](https://www.knowru.com) and [Esri](https://www.esri.com/en-us/home). I am currently an intern at [Fumi](https://fumi.co.kr/main/home/home). I will be working at **Facebook** for summer of 2021. I worked on the front-end and back-end of various projects, using technologies such as **React.js, Redux, Ember.js, Angular.js, Django, Flask, AWS, GraphQL, and PostreSQL**._
 
 ### When did I start programming?
 
@@ -26,3 +26,8 @@ _My first programming experience was in college._
 ### Why do I like to code?
 
 _I love to build and create software & products that impact the world in a positive way. It's a great feeling to be able to help others through technology!_
+
+### What technologies interest me?
+
+_I am still in the process of exploring many different areas of software engineering. So far, I've found passion in delivering high quality end-products to users, as well as the art of crafting beautiful and readable code for us engineers.
+I especially enjoying exploring various web technologies. I love how the technologies related to the web are rapidly developing. I also have a strong interest in designing scalable software architectures._ 

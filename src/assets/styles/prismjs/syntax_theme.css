@@ -43,6 +43,7 @@ code[class*="language-"]::mozselection {
     text-shadow: none;
   }
 }
+
 pre[class*="language-"] {
   padding: 1em;
   margin: .5em 0;
@@ -50,6 +51,7 @@ pre[class*="language-"] {
   background: #f9fafc;
 }
 :not(pre) > code[class*="language-"] {
+  font-weight: normal;
   padding: .1em .3em;
   border-radius: .3em;
   color: #db4c69;

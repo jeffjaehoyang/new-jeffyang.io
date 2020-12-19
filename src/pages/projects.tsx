@@ -9,7 +9,6 @@ const ProjectsPage: React.FC = () => {
     <Layout>
       <SEO title="Projects" />
       <Projects />
-      <hr />
     </Layout>
   );
 };

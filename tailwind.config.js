@@ -1,14 +1,8 @@
+const { css } = require('styled-components');
+
 module.exports = {
   theme: {
-    extend: {
-      // typography: {
-      //   DEFAULT: {
-      //     css: {
-      //       color: '#3c366b'
-      //     }
-      //   }
-      // }
-    }
+    extend: {}
   },
   variants: {},
   plugins: [require('@tailwindcss/typography')]
