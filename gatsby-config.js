@@ -2,9 +2,72 @@ module.exports = {
   siteMetadata: {
     title: `Jeff Yang`,
     description: `A personal blog by Jeff Yang`,
-    author: `Jeff Yang`
+    author: `Jeff Yang`,
+    siteUrl: `https://jeffyang.io`
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map((edge) => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.excerpt,
+                  date: edge.node.frontmatter.date,
+                  url: `${site.siteMetadata.siteUrl}${edge.node.fields.slug}`,
+                  guid: `${site.siteMetadata.siteUrl}${edge.node.fields.slug}`
+                  // custom_elements: [{
+                  //   'content:encoded': edge.node.html
+                  // }, ],
+                });
+              });
+            },
+            query: `
+              {
+                allMarkdownRemark(
+                  filter: { frontmatter: { category: { eq: "blog" } } }
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                ) {
+                  edges {
+                    node {
+                      excerpt
+                      html
+                      fields { slug }
+                      frontmatter {
+                        title
+                        description
+                        date
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: '/rss.xml',
+            title: 'jeffyang.io - RSS Feed',
+            // optional configuration to insert feed reference in pages:
+            // if `string` is used, it will be used to create RegExp and then test if pathname of
+            // current page satisfied this regular expression;
+            // if not provided or `undefined`, all pages will have feed reference inserted
+            match: '^/blog/'
+          }
+        ]
+      }
+    },
     `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
     {
