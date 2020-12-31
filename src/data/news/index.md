@@ -1,5 +1,5 @@
 ---
 category: 'news section'
 title: 'News'
-subtitle: "I've been ..." 
+subtitle: "Recent updates in life"
 ---
