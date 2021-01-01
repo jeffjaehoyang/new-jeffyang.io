@@ -13,8 +13,10 @@ const Share: React.FC<Props> = ({ socialConfig, tags }) => (
     <Styled.FacebookBtn>
       <FacebookShareButton url={socialConfig.config.url} className="button is-outlined is-rounded facebook">
         <Styled.BtnInner>
-          <Icon icon={['fab', 'facebook-square']} style={{ width: 25, height: 25, marginRight: 8 }} />
-          <span className="text">Facebook</span>
+          <Icon icon={['fab', 'facebook-square']} style={{ width: 15, height: 15, marginRight: 5 }} />
+          <span className="text" style={{ fontSize: '0.8em' }}>
+            Facebook
+          </span>
         </Styled.BtnInner>
       </FacebookShareButton>
     </Styled.FacebookBtn>
@@ -28,8 +30,10 @@ const Share: React.FC<Props> = ({ socialConfig, tags }) => (
         hashtags={tags}
       >
         <Styled.BtnInner>
-          <Icon icon={['fab', 'twitter-square']} style={{ width: 25, height: 25, marginRight: 8 }} />
-          <span className="text">Twitter</span>
+          <Icon icon={['fab', 'twitter-square']} style={{ width: 15, height: 15, marginRight: 5 }} />
+          <span className="text" style={{ fontSize: '0.8em' }}>
+            Twitter
+          </span>
         </Styled.BtnInner>
       </TwitterShareButton>
     </Styled.TwitterBtn>
@@ -41,8 +45,10 @@ const Share: React.FC<Props> = ({ socialConfig, tags }) => (
         title={socialConfig.config.title}
       >
         <Styled.BtnInner>
-          <Icon icon={['fab', 'linkedin']} style={{ width: 25, height: 25, marginRight: 8 }} />
-          <span className="text">LinkedIn</span>
+          <Icon icon={['fab', 'linkedin']} style={{ width: 15, height: 15, marginRight: 5 }} />
+          <span className="text" style={{ fontSize: '0.8em' }}>
+            LinkedIn
+          </span>
         </Styled.BtnInner>
       </LinkedinShareButton>
     </Styled.LinkedinBtn>
@@ -54,8 +60,10 @@ const Share: React.FC<Props> = ({ socialConfig, tags }) => (
         title={socialConfig.config.title}
       >
         <Styled.BtnInner>
-          <Icon icon={['fab', 'reddit-square']} style={{ width: 25, height: 25, marginRight: 8 }} />
-          <span className="text">Reddit</span>
+          <Icon icon={['fab', 'reddit-square']} style={{ width: 15, height: 15, marginRight: 5 }} />
+          <span className="text" style={{ fontSize: '0.8em' }}>
+            Reddit
+          </span>
         </Styled.BtnInner>
       </RedditShareButton>
     </Styled.RedditBtn>
