@@ -12,6 +12,7 @@ import {
   faPaperPlane,
   faLink
 } from '@fortawesome/free-solid-svg-icons';
+import { faBadgeCheck, faCheck } from '@fortawesome/pro-light-svg-icons';
 import { FontAwesomeIcon, FontAwesomeIconProps } from '@fortawesome/react-fontawesome';
 
 /* add any additional icon to the library */
@@ -27,7 +28,9 @@ library.add(
   faMapMarkerAlt,
   faPhone,
   faPaperPlane,
-  faLink
+  faLink,
+  faBadgeCheck,
+  faCheck
 );
 
 export type IconProps = FontAwesomeIconProps['icon'];

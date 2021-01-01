@@ -6,11 +6,11 @@ export const News = styled.div`
 `;
 
 export const NewsItem = styled.div`
-  ${tw`flex flex-col`};
+  ${tw`flex flex-row items-center text-center`};
 `;
 
 export const Date = styled.div`
-  ${tw`text-indigo-400 font-bold text-xl`}
+  ${tw`mr-4 text-indigo-400`}
 `;
 
 export const Title = styled.h3`

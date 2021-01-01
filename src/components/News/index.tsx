@@ -1,16 +1,15 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
-import Loadable from '@loadable/component';
 
 import Container from 'components/ui/Container';
 import TitleSection from 'components/ui/TitleSection';
 
-import { SectionTitle, ImageSharpFluid } from 'helpers/definitions';
+import { SectionTitle } from 'helpers/definitions';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import * as Styled from './styles';
-
-const Carousel = Loadable(() => import('components/ui/Carousel'));
+import Icon from 'components/ui/Icon';
+import NewsByYear from 'components/NewsByYear';
 
 interface News {
   node: {
@@ -18,6 +17,15 @@ interface News {
     frontmatter: {
       content: string;
       newsDate: string;
+    };
+  };
+}
+
+interface NewsByYear {
+  node: {
+    id: string;
+    frontmatter: {
+      year: string;
     };
   };
 }
@@ -32,15 +40,14 @@ const News: React.FC = () => {
         }
       }
       allMarkdownRemark(
-        filter: { frontmatter: { category: { eq: "news" } } }
-        sort: { order: DESC, fields: fileAbsolutePath }
+        filter: { frontmatter: { category: { eq: "news by year" } } }
+        sort: { order: DESC, fields: [frontmatter___year] }
       ) {
         edges {
           node {
             id
             frontmatter {
-              content
-              newsDate
+              year
             }
           }
         }
@@ -49,7 +56,7 @@ const News: React.FC = () => {
   `);
 
   const sectionTitle: SectionTitle = markdownRemark.frontmatter;
-  const newsList: News[] = allMarkdownRemark.edges;
+  const newsList: NewsByYear[] = allMarkdownRemark.edges;
 
   return (
     <Container section>
@@ -58,13 +65,13 @@ const News: React.FC = () => {
         {newsList.map((item) => {
           const {
             id,
-            frontmatter: { content, newsDate }
+            frontmatter: { year }
           } = item.node;
 
           return (
             <Styled.NewsItem key={id}>
-              <Styled.Date>{newsDate}</Styled.Date>
-              <Styled.Title>{content}</Styled.Title>
+              <Styled.Date>{year}</Styled.Date>
+              <NewsByYear year={year} />
             </Styled.NewsItem>
           );
         })}
