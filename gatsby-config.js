@@ -3,7 +3,8 @@ module.exports = {
     title: `Jeff Yang`,
     description: `A personal blog by Jeff Yang`,
     author: `Jeff Yang`,
-    siteUrl: `https://jeffyang.io`
+    siteUrl: `https://jeffyang.io`,
+    twitterHandle: '@jjeffyang'
   },
   plugins: [
     {

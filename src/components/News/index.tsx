@@ -1,14 +1,9 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-
 import Container from 'components/ui/Container';
 import TitleSection from 'components/ui/TitleSection';
-
 import { SectionTitle } from 'helpers/definitions';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import * as Styled from './styles';
-import Icon from 'components/ui/Icon';
 import NewsByYear from 'components/NewsByYear';
 
 interface News {

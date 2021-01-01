@@ -7,6 +7,7 @@ import SEO from 'components/SEO';
 import Container from 'components/ui/Container';
 import TitleSection from 'components/ui/TitleSection';
 import MarkdownHtml from 'components/utils/MarkdownHtml';
+import Share from 'components/Share';
 import Commento from 'components/Commento';
 
 import * as Styled from './styles';
@@ -26,6 +27,7 @@ interface Post {
 
 interface Props {
   data: {
+    site: any;
     markdownRemark: Post;
   };
   pageContext: {
@@ -37,6 +39,7 @@ interface Props {
 
 const BlogPost: React.FC<Props> = ({ data, pageContext }) => {
   const post = data.markdownRemark;
+  const site = data.site.siteMetadata;
   const { previous, next } = pageContext;
 
   return (
@@ -66,6 +69,16 @@ const BlogPost: React.FC<Props> = ({ data, pageContext }) => {
             )}
           </span>
         </Styled.Links>
+        <Share
+          socialConfig={{
+            twitterHandle: site.twitterHandle,
+            config: {
+              url: `${site.url}${post.fields.slug}`,
+              title: post.frontmatter.title
+            }
+          }}
+          tags={[]}
+        />
         <Commento id={post.frontmatter.title} />
       </Container>
     </Layout>
@@ -76,6 +89,12 @@ export default BlogPost;
 
 export const query = graphql`
   query BlogPostBySlug($slug: String!) {
+    site {
+      siteMetadata {
+        siteUrl
+        twitterHandle
+      }
+    }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       fields {

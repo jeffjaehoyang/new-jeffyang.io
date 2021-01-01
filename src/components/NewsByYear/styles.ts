@@ -6,7 +6,7 @@ export const News = styled.div`
 `;
 
 export const NewsItem = styled.div`
-  ${tw`flex flex-row items-center text-center`};
+  ${tw`flex flex-row`};
 `;
 
 export const Date = styled.div`

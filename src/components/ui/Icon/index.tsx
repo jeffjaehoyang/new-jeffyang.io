@@ -1,7 +1,14 @@
 import React from 'react';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab, faLinkedin, faGithub, faGithubAlt } from '@fortawesome/free-brands-svg-icons';
+import {
+  fab,
+  faLinkedin,
+  faFacebookSquare,
+  faRedditSquare,
+  faTwitterSquare,
+  faGithubAlt
+} from '@fortawesome/free-brands-svg-icons';
 import {
   faLaptopCode,
   faDrawPolygon,
@@ -20,6 +27,9 @@ library.add(
   fab,
   faLinkedin,
   faGithubAlt,
+  faFacebookSquare,
+  faRedditSquare,
+  faTwitterSquare,
   faLaptopCode,
   faDrawPolygon,
   faEdit,
