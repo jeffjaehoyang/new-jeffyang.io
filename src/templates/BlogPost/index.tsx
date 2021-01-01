@@ -73,7 +73,7 @@ const BlogPost: React.FC<Props> = ({ data, pageContext }) => {
           socialConfig={{
             twitterHandle: site.twitterHandle,
             config: {
-              url: `${site.url}${post.fields.slug}`,
+              url: `${site.siteUrl}${post.fields.slug}`,
               title: post.frontmatter.title
             }
           }}
@@ -98,6 +98,7 @@ export const query = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       fields {
+        slug
         readingTime {
           text
         }
