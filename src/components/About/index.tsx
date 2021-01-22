@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import Container from 'components/ui/Container';
 import MarkdownHtml from 'components/utils/MarkdownHtml';
+import FormatHtml from 'components/utils/FormatHtml';
 
 interface About {
   html: React.ReactNode;
@@ -28,7 +29,7 @@ const About: React.FC = () => {
 
   return (
     <Container section>
-      <MarkdownHtml content={aboutMe.html} />
+      <FormatHtml content={aboutMe.html} />
     </Container>
   );
 };

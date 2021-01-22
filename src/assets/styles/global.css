@@ -6,16 +6,80 @@
 @import 'tailwindcss/utilities';
 
 /* purgecss start ignore */
+.format-html li {
+  list-style: disc;
+}
+
+.format-html a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.format-html a:hover {
+  text-decoration: none;
+}
+
+.format-html p,
+blockquote,
+ul,
+ol,
+dl,
+table,
+pre {
+  margin: 15px 0;
+}
+
+.format-html ul,
+ol {
+  padding-left: 30px;
+}
+
+.format-html h1 {
+  border-bottom: 1px solid #ddd;
+  font-size: 2.5em;
+}
+
+.format-html h2 {
+  border-bottom: 1px solid #eee;
+  font-size: 2em;
+}
+
+.format-html h3 {
+  font-size: 1.5em;
+}
+
+.format-html h4 {
+  font-size: 1.2em;
+}
+
+.format-html h5 {
+  font-size: 1em;
+}
+
+.format-html h6 {
+  font-size: 1em;
+}
+
+.format-html h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  line-height: 1.7;
+}
+
 .markdown img {
   border-radius: 0.3rem;
   width: 100%;
 }
 
 .markdown code::before {
-  content: "";
+  content: '';
 }
 
 .markdown code::after {
-  content: "";
+  content: '';
 }
 /* purgecss end ignore */

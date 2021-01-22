@@ -13,6 +13,6 @@ export const Date = styled.div`
   ${tw`mr-4 text-indigo-400`}
 `;
 
-export const Title = styled.h3`
+export const Title = styled.div`
   ${tw`my-4 text-indigo-900`};
 `;

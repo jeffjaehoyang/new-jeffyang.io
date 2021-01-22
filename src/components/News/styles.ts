@@ -10,7 +10,7 @@ export const NewsItem = styled.div`
 `;
 
 export const Date = styled.div`
-  ${tw`text-indigo-400 font-bold text-xl`}
+  ${tw`text-indigo-900 font-bold text-xl`}
 `;
 
 export const Title = styled.h3`
