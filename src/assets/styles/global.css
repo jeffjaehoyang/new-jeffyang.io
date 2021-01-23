@@ -35,12 +35,10 @@ ol {
 }
 
 .format-html h1 {
-  border-bottom: 1px solid #ddd;
   font-size: 2.5em;
 }
 
 .format-html h2 {
-  border-bottom: 1px solid #eee;
   font-size: 2em;
 }
 
