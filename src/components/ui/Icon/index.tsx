@@ -19,7 +19,7 @@ import {
   faPaperPlane,
   faLink
 } from '@fortawesome/free-solid-svg-icons';
-import { faBadgeCheck, faCheck } from '@fortawesome/pro-light-svg-icons';
+import { faBadgeCheck, faCheck, faCheckCircle } from '@fortawesome/pro-light-svg-icons';
 import { FontAwesomeIcon, FontAwesomeIconProps } from '@fortawesome/react-fontawesome';
 
 /* add any additional icon to the library */
@@ -40,7 +40,8 @@ library.add(
   faPaperPlane,
   faLink,
   faBadgeCheck,
-  faCheck
+  faCheck,
+  faCheckCircle
 );
 
 export type IconProps = FontAwesomeIconProps['icon'];

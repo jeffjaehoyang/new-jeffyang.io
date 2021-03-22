@@ -9,6 +9,7 @@ interface News {
     id: string;
     frontmatter: {
       content: string;
+      explanation: string;
       year: string;
     };
   };
@@ -30,6 +31,7 @@ const NewsByYear: React.FC<Props> = ({ year }) => {
             id
             frontmatter {
               content
+              explanation
               year
             }
           }
@@ -47,15 +49,16 @@ const NewsByYear: React.FC<Props> = ({ year }) => {
         {newsList.map((item) => {
           const {
             id,
-            frontmatter: { content, year }
+            frontmatter: { content, explanation, year }
           } = item.node;
 
           return (
             <Styled.NewsItem key={id}>
               <Styled.Title>
-                <Icon icon={['fal', 'check']} style={{ marginRight: 10, color: 'green' }} />
+                <Icon icon={['fal', 'check-circle']} style={{ marginRight: 10, color: 'green' }} />
                 {content}
               </Styled.Title>
+              <Styled.Explanation>{explanation}</Styled.Explanation>
             </Styled.NewsItem>
           );
         })}

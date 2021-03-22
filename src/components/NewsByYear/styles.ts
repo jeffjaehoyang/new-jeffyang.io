@@ -6,7 +6,7 @@ export const News = styled.div`
 `;
 
 export const NewsItem = styled.div`
-  ${tw`flex flex-row`};
+  ${tw`flex flex-col`};
 `;
 
 export const Date = styled.div`
@@ -14,5 +14,9 @@ export const Date = styled.div`
 `;
 
 export const Title = styled.div`
-  ${tw`my-4 text-indigo-900`};
+  ${tw`flex items-center my-4 text-indigo-900 font-bold`};
+`;
+
+export const Explanation = styled.div`
+  ${tw`mb-2 ml-6 text-indigo-900`}
 `;
