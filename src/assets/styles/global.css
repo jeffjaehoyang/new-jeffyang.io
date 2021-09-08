@@ -68,9 +68,16 @@ h6 {
   line-height: 1.7;
 }
 
+.format-html img {
+  border-radius: 0.3rem;
+  width: 100%;
+  object-fit: cover;
+}
+
 .markdown img {
   border-radius: 0.3rem;
   width: 100%;
+  object-fit: cover;
 }
 
 .markdown code::before {

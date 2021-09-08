@@ -5,16 +5,16 @@ title: 'Minimum Number of Coins for Exchange'
 description: 'A blog post on how to solve the coin exchange problem'
 date: '2020-06-13'
 tags: ['Data Structures & Algorithms']
-published: true
+published: false
 ---
 
 ![Blog Post Thumbnail](./min_num_coins_for_exchange_cover.png)
 
-In this post, I am going to attempt to dissect the popular *coin exchange* problem that can be found on many technical interview preparation resources (e.g. LeetCode).  
+In this post, I am going to attempt to dissect the popular *coin exchange* problem that can be found on many technical interview preparation resources (e.g. LeetCode).
 
-**Problem Statement:** You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return `-1`.  
+**Problem Statement:** You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return `-1`.
 
-**Problem Source**: LeetCode - [Coin Change](https://leetcode.com/problems/coin-change/)  
+**Problem Source**: LeetCode - [Coin Change](https://leetcode.com/problems/coin-change/)
 
 **Examples:**
 
@@ -25,9 +25,9 @@ Explanation: 11 = 5 + 5 + 1
 
 Input: target = 3, coins = [2]
 Output: -1
-```  
+```
 
-**Dissecting the Problem**: This particular question is deceivingly simple. In fact, it used to be a problem that we all had to solve on a daily basis back in the days when paying in cash was mainstream. For example, if you had to pay $35 at a restaurant and you had $1, $5, $10, $20 coins, what combinations of coins would you use to pay? Obviously, in real life, paying with the minimum number of coins wouldn't always be your goal. For this problem, however, let us pretend that paying with the minimum number of coins is always our goal. What would be our strategy then? Most people will be tempted to follow a *greedy* approach, which dictates that we simply select the highest value coin at every step. The problem is that the greedy approach will not guarantee that the selected coins will sum up to the target amount. It turns out that there actually isn't a simple strategy/pattern we can follow to come up with the correct solution. What can we do then? Well, we could try *every combination* of coins, and see which combination leaves us with the minimum number of coins. Depending on which coin we select, we will need to subtract that coin's value from the target amount in order to ensure that we incrementally edge towards the final goal. With that in mind, let's take a deep dive into actually coding out the solution!  
+**Dissecting the Problem**: This particular question is deceivingly simple. In fact, it used to be a problem that we all had to solve on a daily basis back in the days when paying in cash was mainstream. For example, if you had to pay $35 at a restaurant and you had $1, $5, $10, $20 coins, what combinations of coins would you use to pay? Obviously, in real life, paying with the minimum number of coins wouldn't always be your goal. For this problem, however, let us pretend that paying with the minimum number of coins is always our goal. What would be our strategy then? Most people will be tempted to follow a *greedy* approach, which dictates that we simply select the highest value coin at every step. The problem is that the greedy approach will not guarantee that the selected coins will sum up to the target amount. It turns out that there actually isn't a simple strategy/pattern we can follow to come up with the correct solution. What can we do then? Well, we could try *every combination* of coins, and see which combination leaves us with the minimum number of coins. Depending on which coin we select, we will need to subtract that coin's value from the target amount in order to ensure that we incrementally edge towards the final goal. With that in mind, let's take a deep dive into actually coding out the solution!
 
 ## Naive Recursive Approach
 
@@ -44,10 +44,10 @@ def min_number_coin_change_naive(target, coins):
     return result if result != float("inf") else -1
 
 def recursion_helper(curr_target, coins):
-    if curr_target == 0: 
+    if curr_target == 0:
         return 0
     overall_min = float("inf")
-    for coin in coins: 
+    for coin in coins:
         if curr_target >= coin:
             new_target = curr_target - coin
             curr_length = 1 + recursion_helper(new_target, coins)
@@ -56,7 +56,7 @@ def recursion_helper(curr_target, coins):
     return overall_min
 ```
 
-The recursive algorithm is quite straightforward, nothing too complicated. As shown in the diagram above, the algorithm finds the minimum number of coins required for a target amount by going through all possible valid combinations, while keeping track of the overall minimum. This naive recursive approach works, but is prohibitively slow and expensive. Why? Because it is not smart enough to realize that it is being forced to calculate the result of the same calculations over and over again. We can certainly do better.  
+The recursive algorithm is quite straightforward, nothing too complicated. As shown in the diagram above, the algorithm finds the minimum number of coins required for a target amount by going through all possible valid combinations, while keeping track of the overall minimum. This naive recursive approach works, but is prohibitively slow and expensive. Why? Because it is not smart enough to realize that it is being forced to calculate the result of the same calculations over and over again. We can certainly do better.
 
 ## Memoization (Top-Down Approach)
 
@@ -92,7 +92,7 @@ def memo_helper(curr_target, coins, memo):
     return overall_min
 ```
 
-I hope the algorithm implemented above was fairly easy to understand. Just remember that memoization is nothing but an optimization technique that *caches previous results* in order to enhance the overall performance of the algorithm.  
+I hope the algorithm implemented above was fairly easy to understand. Just remember that memoization is nothing but an optimization technique that *caches previous results* in order to enhance the overall performance of the algorithm.
 
 ## Bottom-Up Approach
 
@@ -114,26 +114,26 @@ def min_number_coin_change_bottomup(target, coins):
     return dp[target] if dp[target] != float("inf") else -1
 ```
 
-I know. That looks so much simpler to read than the recursive solutions! But for one to correctly implement the bottom-up approach, it is imperative that one also understands the recursive algorithms. At the end of the day, the bottom-up solution also depends on identifying the correct *recurrence relation*.  
+I know. That looks so much simpler to read than the recursive solutions! But for one to correctly implement the bottom-up approach, it is imperative that one also understands the recursive algorithms. At the end of the day, the bottom-up solution also depends on identifying the correct *recurrence relation*.
 
-**Time Complexity**  
-C : Target amount, n : Number of coin denominations  
-*Naive Recursion* : O(C<sup>n</sup>)  
-*Memoization* : O(Cn)  
+**Time Complexity**
+C : Target amount, n : Number of coin denominations
+*Naive Recursion* : O(C<sup>n</sup>)
+*Memoization* : O(Cn)
 *Bottom-Up* : O(Cn)
 
-**Space Complexity**  
-C : Target amount, n : Number of coin denominations  
-*Naive Recursion* : O(C)  
-*Memoization* : O(C + n)  
-*Bottom-Up* : O(n)  
+**Space Complexity**
+C : Target amount, n : Number of coin denominations
+*Naive Recursion* : O(C)
+*Memoization* : O(C + n)
+*Bottom-Up* : O(n)
 
 ## Real Performance of Algorithms
 
 To bring all this optimization bluff into context, and to actually show you that the difference is *real*, I wrote the following script to see for ourselves how much of a difference it actually makes to use dynamic programming techniques (*versus the naive recusion algorithm*).
 
 ```python
-from bottomup_coin_change import min_number_coin_change_bottomup 
+from bottomup_coin_change import min_number_coin_change_bottomup
 from recursive_coin_change import min_number_coin_change_naive
 from memo_coin_change import min_number_coin_change_memo
 
@@ -148,7 +148,7 @@ min_number_coin_change_memo(target=target_num, coins=coins)
 min_number_coin_change_naive(target=target_num, coins=coins)
 ```
 
-Just in case you were wondering how I measured the seconds, I used Python's builtin `time` module. Take a look at how much of a difference optimization makes. I had to set the `target_num` and `coins` sufficiently small to make the runtime of the naive recursive algorithm bearable to wait.  
+Just in case you were wondering how I measured the seconds, I used Python's builtin `time` module. Take a look at how much of a difference optimization makes. I had to set the `target_num` and `coins` sufficiently small to make the runtime of the naive recursive algorithm bearable to wait.
 
 ![Diagram that illustrates the recursion tree for the coin exchange problem](./coin_change_performance.gif)
 

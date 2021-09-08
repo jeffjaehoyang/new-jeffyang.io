@@ -14,7 +14,7 @@ const Logo: React.FC = () => {
           title
         }
       }
-      placeholderImage: file(relativePath: { eq: "profile.jpg" }) {
+      placeholderImage: file(relativePath: { eq: "watermelon-logo.png" }) {
         childImageSharp {
           fluid(maxWidth: 80) {
             ...GatsbyImageSharpFluid
