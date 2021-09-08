@@ -40,7 +40,7 @@ const RecentPosts: React.FC = () => {
         }
       }
       allMarkdownRemark(
-        filter: { frontmatter: { category: { eq: "blog" } } }
+        filter: { frontmatter: { category: { eq: "blog" }, published: { eq: true } } }
         sort: { fields: [frontmatter___date], order: DESC }
         limit: 4
       ) {
