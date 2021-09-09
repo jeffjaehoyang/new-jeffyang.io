@@ -22,7 +22,7 @@ be reaching out. But it happened (in 2019 fall). I was handed an interview - but
 
 ### Team Selection
 The team selection process for interns at Facebook is done in a manner so that both parties (i.e. the interns and the company) benefit from the internship program. A few months before the start date, interns are sent out a survey in which one can express interest in certain pillars within Facebook. Specific teams are not provided as options to select from, but interns can express interest in certain software engineering fields (e.g. machine learning, frontend engineering, backend engineering, etc) and can also declare
-interest specific app pillars (e.g. Instagram, Facebook, Oculus, WhatsApp, Messenger, etc). Once the surveys are submitted by interns, a mysterious script magically does the team matching. I can't speak for other interns, but from what I've seen and heard, the team matching script does a pretty good job of keeping both parties content. I was matched with Business Messeging Lead Gen Ads team. It's an ads product team that is business-facing, so I got to work on a product that was being used by
+interest specific app pillars (e.g. Instagram, Facebook, Oculus, WhatsApp, Messenger, etc). Once the surveys are submitted by interns, a mysterious script magically does the team matching. I can't speak for other interns, but from what I've seen and heard, the team matching script does a pretty good job of keeping both parties content. I was matched with Business Messaging Lead Gen Ads team. It's an ads product team that is business-facing, so I got to work on a product that was being used by
 small and big businesses world-wide. I felt like I was matched with a team that I could excel in.
 
 ### A Remote Internship
