@@ -37,4 +37,4 @@ I love to build and create software & products that impact the world in a positi
 #### What technologies interest me?
 
 I am still in the process of exploring many different areas of software engineering. So far, I've found passion in delivering high quality end-products to users, as well as the art of crafting beautiful and readable code for us engineers.
-I especially enjoying exploring various web technologies. I love how the technologies related to the web are rapidly developing and constantly changing for the better. I'm also developing a passion for scalable software systems and the infrastructure work that supports products used world-wide by millions.
+I especially enjoy exploring various web technologies. I love how the technologies related to the web are rapidly developing and constantly changing for the better. I'm also interested in scalable software systems and the infrastructure work that supports products used world-wide by millions. Bottom-line: still have lots to learn 😉!
