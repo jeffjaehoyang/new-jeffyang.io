@@ -2,7 +2,6 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import Container from 'components/ui/Container';
-import MarkdownHtml from 'components/utils/MarkdownHtml';
 import FormatHtml from 'components/utils/FormatHtml';
 
 interface About {
@@ -24,7 +23,6 @@ const About: React.FC = () => {
     }
   `);
 
-  // const sectionTitle: SectionTitle = markdownRemark.frontmatter;
   const aboutMe = markdownRemark;
 
   return (
