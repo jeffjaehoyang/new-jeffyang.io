@@ -11,7 +11,6 @@ const IndexPage: React.FC = () => {
       <SEO title="Home" />
       <HeroBanner />
       <RecentPosts />
-      <hr />
       <News />
     </Layout>
   );

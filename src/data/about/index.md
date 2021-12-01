@@ -5,7 +5,7 @@ title: 'About Me'
 
 ### Recording life, code, and passion.
 
-Hi, I'm Jeff 👋. Welcome to my personal corner of the internet! I created this blog for myself to freely share thoughts and document my progress as a software engineer. I have benefited immensely from the generous and welcoming programming community who share their knowledge with others. I hope to replicate that learning experience for others through this blog!
+Hi, I'm Jeff 👋  . Welcome to my personal corner of the internet! I created this blog for myself to freely share thoughts and document my progress as a software engineer. I have benefited immensely from the generous and welcoming programming community who share their knowledge with others. I hope to replicate that learning experience for others through this blog!
 
 ![Watering a tree in Runyon Canyon, LA](./about-pic.jpeg)
 

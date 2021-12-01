@@ -17,7 +17,7 @@ const TitleSection: React.FC<Props> = ({ center, title, subtitle, readingTime })
       </Styled.SubTitle>
     )}
     <Styled.Title center={center}>{subtitle}</Styled.Title>
-    <Styled.Separator center={center} />
+    {/* <Styled.Separator center={center} /> */}
   </Styled.TitleSection>
 );
 
