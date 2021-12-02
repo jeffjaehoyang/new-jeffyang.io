@@ -31,12 +31,12 @@ const ProjectsCard: React.FC<Props> = ({
         </Styled.Tags>
         <Styled.Icons>
           {projectLink && (
-            <a href={projectLink} className={'text-indigo-300'}>
+            <a href={projectLink} className={'text-indigo-900'}>
               <Icon icon={['fas', 'link']} style={{ height: '20', width: '20' }} />
             </a>
           )}
           {githubRepo && (
-            <a href={githubRepo} className={'text-indigo-300'}>
+            <a href={githubRepo} className={'text-indigo-900'}>
               <Icon icon={['fab', 'github']} style={{ marginLeft: 10, height: '20', width: '20' }} />
             </a>
           )}
