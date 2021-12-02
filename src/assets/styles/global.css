@@ -6,6 +6,10 @@
 @import 'tailwindcss/utilities';
 
 /* purgecss start ignore */
+body {
+  background-color: #f9f9f9;
+}
+
 .format-html li {
   list-style: disc;
 }
