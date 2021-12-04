@@ -16,7 +16,7 @@ const Footer: React.FC = () => (
           <Icon icon={['fab', 'linkedin']} style={{ height: '25', width: '25' }} />
         </Styled.Link>
       </Styled.Links>
-      <Styled.Copyright>© 2019-2021 by Jeff Yang </Styled.Copyright>
+      <Styled.Copyright>© 2021 by Jeff Yang </Styled.Copyright>
     </Container>
   </Styled.Footer>
 );
