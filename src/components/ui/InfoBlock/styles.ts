@@ -6,12 +6,12 @@ export interface StyledProps {
 }
 
 export const InfoBlock = styled.div<StyledProps>`
-  ${tw`flex flex-col my-4 mx-3 p-4 bg-white rounded-lg border border-gray-300 text-indigo-900`};
+  ${tw`flex flex-col p-4 text-indigo-900 bg-white border border-gray-300 rounded-lg`};
   ${({ center }) => center && tw`items-center`};
 `;
 
 export const Icon = styled.span`
-  ${tw`flex items-center justify-center w-10 h-10 text-indigo-500 border border-teal-400 rounded-full mb-2`};
+  ${tw`flex items-center justify-center w-10 h-10 mb-2 text-indigo-500 border border-teal-400 rounded-full`};
 `;
 
 export const Wrapper = styled.div<StyledProps>`
@@ -19,7 +19,10 @@ export const Wrapper = styled.div<StyledProps>`
 `;
 
 export const Title = styled.h3`
-  ${tw`text-md mt-1 font-semibold`};
+  ${tw`mt-1 font-semibold text-md`};
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 export const Content = styled.p`
@@ -31,7 +34,7 @@ export const Tags = styled.div`
 `;
 
 export const Tag = styled.span`
-  ${tw`text-xs text-indigo-900 border border-teal-400 rounded-full px-2 py-1 mr-2`}
+  ${tw`px-2 py-1 mr-2 text-xs text-indigo-900 border border-teal-400 rounded-full`}
 `;
 
 export const Date = styled.h3`

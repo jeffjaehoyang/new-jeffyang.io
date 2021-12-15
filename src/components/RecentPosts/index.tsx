@@ -1,14 +1,12 @@
-import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-
-import InfoBlock from 'components/ui/InfoBlock';
-import Container from 'components/ui/Container';
-import TitleSection from 'components/ui/TitleSection';
 import Button from 'components/ui/Button';
-import { Link } from 'gatsby';
+import Container from 'components/ui/Container';
+import InfoBlock from 'components/ui/InfoBlock';
+import TitleSection from 'components/ui/TitleSection';
 import { motion } from 'framer-motion';
-
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import { SectionTitle } from 'helpers/definitions';
+import React from 'react';
+import { RiPushpinFill } from 'react-icons/ri';
 
 import * as Styled from './styles';
 
@@ -82,7 +80,7 @@ const RecentPosts: React.FC = () => {
           return (
             <Styled.PostItem key={id}>
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 1 }}>
-                <Link to={slug}>
+                <Link to={slug} className="relative">
                   <InfoBlock
                     title={title}
                     description={description}
@@ -90,6 +88,7 @@ const RecentPosts: React.FC = () => {
                     date={date}
                     readingTime={readingTime.text}
                   />
+                  <RiPushpinFill className="absolute text-red-600" style={{ top: 5, left: 8 }} />
                 </Link>
               </motion.div>
             </Styled.PostItem>
