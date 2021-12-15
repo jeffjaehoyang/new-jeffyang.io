@@ -6,7 +6,7 @@ export interface StyledProps {
 }
 
 export const InfoBlock = styled.div<StyledProps>`
-  ${tw`flex flex-col p-4 text-indigo-900 bg-white border border-gray-300 rounded-lg`};
+  ${tw`relative flex flex-col p-4 text-indigo-900 bg-white border border-gray-300 rounded-lg`};
   ${({ center }) => center && tw`items-center`};
 `;
 
