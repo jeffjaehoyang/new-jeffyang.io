@@ -3,7 +3,7 @@ category: 'blog'
 cover: './thumbnail.png'
 title: 'A Practical Application of Redis Cache'
 description: 'A simple guide to getting started with redis cache.'
-date: '2021-12-17'
+date: '2021-12-18'
 tags: ['Web Development']
 published: true
 ---
@@ -185,8 +185,8 @@ Then, let's refresh the page to initiate another call to our backend, and inspec
 
 ![API call with cache](./with_cache.png)
 
-*Wow*. We just shaved off **99.3%** of the total response time with the Redis cache implementation. It's not only that - by caching API responses in Redis cache, I was also able to work with the Alphavantage free tier API during development (maximum of 5 requests per minute and 500 requests per day). If [inretrospective.finance](https://www.inretrospect.finance) scales up in the future, there will definitely be a need to start using the paid plans, but for now, this will do.
+*Wow*. The cached response only took **60 milliseconds**. We just shaved off **99.3%** of the total response time with the Redis cache implementation. It's not only that - by caching API responses in Redis cache, I was also able to work with the Alphavantage free tier API during development (maximum of 5 requests per minute and 500 requests per day). If [inretrospective.finance](https://www.inretrospect.finance) scales up in the future, there will definitely be a need to start using the paid plans, but for now, this will do.
 
 ## Wrapping Up
 
-What we went through today is an example of how the Redis cache can be used in a real-world project. Redis cache is so simple to use, yet so powerful. As developers, we are responsible to ensure that users gets the best experience from the software we create - tools like Redis make our lives so much easier! I plan on writing another blog post on things I learned while building [inretrospect.finance](https://www.inretrospect.finance), so stay tuned :)
+What we went through today is an example of how the Redis cache can be used in a real-world project. Redis cache is so simple to use, yet so powerful. As developers, it is our responsibility to ensure that users get the best experience from the software we create - tools like Redis make our lives so much easier! I plan on writing another blog post on things I learned while building [inretrospect.finance](https://www.inretrospect.finance), so stay tuned :)
