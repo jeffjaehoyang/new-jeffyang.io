@@ -10,7 +10,7 @@ published: true
 
 ![Blog Post Thumbnail](./thumbnail.png)
 
-Recently, I've been working on a side project - a web application ([inretrospect.finance](https://www.inretrospect.finance)) that lets users record their investments with notes for future reference. The whole project is built on top of a fantastic API from [Alphavantage](https://www.alphavantage.co/documentation/) that provides detailed financial data on public companies. While it would have been great if I it were possible to make unlimited API requests from my application - their free tier plan only allows for 5 requests per minute and 500 requests per day. This obviously will significantly hamper user experience, so I needed to find a solution. After putting some thought into this, I decided to *cache* API requests so that whenver there's a *cache hit*, a request to the actual API endpoint is not made, therefore cutting down the number of requests to the API service. With that context in mind, let's learn more about Redis.
+Recently, I've been working on a side project - a web application ([inretrospect.finance](https://www.inretrospect.finance)) that lets users record their investments with notes for future reference. The whole project is built on top of a fantastic API from [Alphavantage](https://www.alphavantage.co/documentation/) that provides detailed financial data on public companies. While it would have been great if it were possible to make unlimited API requests - their free tier plan only allows for 5 requests per minute and 500 requests per day. This obviously is a significant bottleneck, so I needed to find a solution. After putting some thought into this, I decided to *cache* API requests so that whenver there's a *cache hit*, a request to the actual API endpoint is not made, therefore cutting down the number of requests to the API service. With that context in mind, let's dive in.
 
 ## 1. What is Redis?
 
@@ -35,13 +35,13 @@ That's about it - you should be able to run Redis on your machine now. For insta
 
 ## 3. How can Redis Help?
 
-Before we proceed, I'd like to explain what the problem was that I faced - and why Redis turned out to be a great option to address the problem at hand. In the web application [inretrospect.finance](https://www.inretrospect.finance), I needed historical stock market data for stocks of user's choice (US stocks). For the purposes of this application, I did not need real-time market data, but I did need the data to be updated once a day after market close. For example, if a user registered Facebook and Google as stocks of interest, I needed historical market data on both of these stocks in order to render a line chart. To help your understanding, below is a screenshot of the UI. 
+Before we proceed, I'd like to explain a little more about the problem I faced, and why Redis turned out to be a great option to address the problem at hand. In the web application [inretrospect.finance](https://www.inretrospect.finance), I needed historical stock market data for stocks of user's choice (US stocks). For the purposes of this application, I did not need real-time market data, but I did need the data to be updated once a day after market close. For example, if a user registered Facebook and Google as stocks of interest, I needed historical market data on both of these stocks in order to render a line chart. To help your understanding, below is a screenshot of the UI that needs such historical market data to render properly.
 
 ![Google Stock Line Chart](./stock_chart.png)
 
-I obviously cannot magically pull stock market data out of nowhere - I need to use an API that provides such market data. Now, let us think about how one might go about achieving this relatively simple task. The most naive and simple solution would be to send a request to the API endpoint whenever the UI is rendered. I used React.js to build the client side of the application - let us see what such an implementation would look like in code.
+I obviously cannot magically pull stock market data out of nowhere - I needed to use an API that provides such market data. Now, let us think about how one might go about achieving this relatively simple task. The most naive and simple solution would be to send a request to the API endpoint whenever the UI is rendered. I used React to build the client side of the application - let us see what such an implementation would look like in code.
 
-```typescript:title=StockCard.tsx {6-9}
+```javascript:title=StockCard.jsx {6-9}
   // StockCard component
   const [stockData, setStockData] = useState(null);
 
@@ -68,7 +68,7 @@ It's a standard API call that would occur in the useEffect hook of a React funct
 
 In order to handle the caching logic, I created an API endpoint that acts as a wrapper to the actual API endpoint that provides the market data. I did this using a Node.js Express application - let us see how to set up Redis within a basic and simple Express application. Since this post is not meant to be an Express tutorial, I'll assume that you already have an Express app up and running, or that you'd be able to set it up yourself (it should be rather simple). 
 
-We first need to install Redis client that will help us interact with the Redis service that is being run in the background. Because our backend is being built in Node.js, we will need to do the following:
+We first need to install Redis client that will help us interact with the Redis service that is being run in the background. Because our backend is being built in Node.js, we will need to do the following within the Express project directory:
 
 ```bash
 $ npm install redis
