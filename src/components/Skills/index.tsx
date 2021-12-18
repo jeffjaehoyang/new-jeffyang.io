@@ -1,12 +1,10 @@
-import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-
 import Container from 'components/ui/Container';
-import TitleSection from 'components/ui/TitleSection';
 import ProgressBar from 'components/ui/ProgressBar';
+import TitleSection from 'components/ui/TitleSection';
+import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
-
 import { SectionTitle } from 'helpers/definitions';
+import React from 'react';
 
 import * as Styled from './styles';
 
@@ -40,7 +38,6 @@ const Skills: React.FC = () => {
   `);
 
   const sectionTitle: SectionTitle = markdownRemark.frontmatter;
-  console.log('place', placeholderImage.childImageSharp.fluid);
 
   return (
     <Container section>

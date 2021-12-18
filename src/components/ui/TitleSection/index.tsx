@@ -1,9 +1,8 @@
 import React from 'react';
 
 import * as Styled from './styles';
-import { StyledProps } from './styles';
 
-interface Props extends StyledProps {
+interface Props extends Styled.StyledProps {
   title: string;
   subtitle?: string;
   readingTime?: string;

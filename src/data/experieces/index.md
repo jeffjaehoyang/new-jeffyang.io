@@ -1,5 +1,5 @@
 ---
 category: 'experiences section'
-title: "Professional Software Development"
-subtitle: 'Work Experience'
+title: "Resume"
+subtitle: 'Data-Driven Software Development'
 ---

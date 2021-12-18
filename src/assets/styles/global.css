@@ -95,4 +95,30 @@ h6 {
 pre {
   margin-top: 0 !important;
 }
+
+.react-pdf__Document {
+  margin: auto;
+  width: 100%;
+}
+
+.react-pdf__Page {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+
+.react-pdf__Page__svg {
+  border-radius: 20px;
+  height: auto;
+  display: block;
+  background-color: white;
+  max-width: 100% !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+.react-pdf__Page__svg svg {
+  width: 100%;
+  height: auto;
+}
+
 /* purgecss end ignore */

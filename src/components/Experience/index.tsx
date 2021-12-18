@@ -1,12 +1,15 @@
-import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 
-import Timeline from 'components/ui/Timeline';
 import Container from 'components/ui/Container';
+import Timeline from 'components/ui/Timeline';
 import TitleSection from 'components/ui/TitleSection';
 import FormatHtml from 'components/utils/FormatHtml';
-
+import { graphql, useStaticQuery } from 'gatsby';
 import { SectionTitle } from 'helpers/definitions';
+import React from 'react';
+import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
+
+import Resume from './resume.pdf';
 
 interface Experience {
   node: {
@@ -56,8 +59,17 @@ const Experience: React.FC = () => {
   return (
     <Container section>
       <TitleSection title={sectionTitle.title} subtitle={sectionTitle.subtitle} />
-
-      {experiences.map((item) => {
+      <a
+        className="mb-4 text-indigo-700 underline"
+        href="https://www.dropbox.com/s/5f0yjzryv795q57/jeff-public-resume.pdf?dl=0"
+        target="_blank"
+      >
+        Link to Resume
+      </a>
+      <Document file={Resume} renderMode="svg">
+        <Page pageNumber={1} scale={1.2} />
+      </Document>
+      {/* {experiences.map((item) => {
         const {
           id,
           html,
@@ -74,7 +86,7 @@ const Experience: React.FC = () => {
             endDate={endDate}
           />
         );
-      })}
+      })} */}
     </Container>
   );
 };

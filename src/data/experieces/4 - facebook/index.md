@@ -7,6 +7,6 @@ endDate: 'Sep 2021'
 ---
 
 Business Messaging Lead Gen Ads Team
-* Led a UI facelift initiative for ad creation dialog, increasing ad creation rate by ~30%
-* Designed an answer validation system for customer-submitted answers to lead generation campaigns in an effort to increase quality of leads generated
+* Spearheaded UI enhancement initiative to make ad creation dialog more accessible and streamlined for businesses, increasing publishing rate by 30% 
+* Configured answer validation system that filters lead generation campaign responses for greater quality and efficiency 
 * Tools: **Mercurial, React, Hack(PHP)**
