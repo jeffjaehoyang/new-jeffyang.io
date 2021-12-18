@@ -1,26 +1,28 @@
 const path = require(`path`);
-const {
-  createFilePath
-} = require(`gatsby-source-filesystem`);
+const { createFilePath } = require(`gatsby-source-filesystem`);
 
-exports.onCreateWebpackConfig = ({
-  actions
-}) => {
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   actions.setWebpackConfig({
     resolve: {
       modules: [path.resolve(__dirname, `src`), `node_modules`]
     }
   });
+  if (stage === 'build-html') {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /canvas/,
+            use: loaders.null()
+          }
+        ]
+      }
+    });
+  }
 };
 
-exports.onCreateNode = ({
-  node,
-  actions,
-  getNode
-}) => {
-  const {
-    createNodeField
-  } = actions;
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions;
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({
@@ -35,13 +37,8 @@ exports.onCreateNode = ({
   }
 };
 
-exports.createPages = async ({
-  graphql,
-  actions
-}) => {
-  const {
-    createPage
-  } = actions;
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions;
   const blogPostTemplate = path.resolve(`src/templates/BlogPost/index.tsx`);
 
   const res = await graphql(`
