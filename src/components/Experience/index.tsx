@@ -66,7 +66,7 @@ const Experience: React.FC = () => {
       >
         Link to Resume
       </a>
-      <Document file={'https://www.dropbox.com/s/5f0yjzryv795q57/jeff-public-resume.pdf?dl=0'} renderMode="svg">
+      <Document file={Resume} renderMode="svg">
         <Page pageNumber={1} scale={1.2} />
       </Document>
       {/* {experiences.map((item) => {
