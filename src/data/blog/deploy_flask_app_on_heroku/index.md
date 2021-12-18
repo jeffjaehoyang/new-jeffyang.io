@@ -18,13 +18,13 @@ Heroku is an extremely popular Platform as a Service (PaaS). In case you are unf
 ## 2. Prerequisites
 To deploy on Heroku, you will need a basic application to deploy (obviously). In this post, I will be writing specifically about how to deploy a Flask application on Heroku. Hopefully, your application is running in a virtual environment (it's always a good idea, when working with Python). Additionally, a very basic knowledge of the command line and git would be of great help. Before we get started, if you don't have an application, you can still follow along by cloning my repository to your local machine (you will need to have git installed):  
 
-```console
+```bash
 $ git clone https://github.com/jeffjaehoyang/twitter_bot.git 
 ```
 
 You should see that you have a directory called "twitter_bot" now. Assuming you have pip and python3 installed:  
 
-```console
+```bash
 $ cd twitter_bot
 $ python3 -m venv venv
 $ source venv/bin/activate
@@ -36,7 +36,7 @@ Note that the last command above installs into the virtual environment all the d
 ## 3. Starter
 First, you will need to download the Heroku CLI. For more information, please take a look [here](https://devcenter.heroku.com/articles/heroku-cli#download-and-install). During this process, you should have been prompted to create a Heroku account (please make sure you do, you'll need that!) This first step should have been relatively simple and straightforward. Once you download the Heroku CLI, you will have to login.  
 
-```console
+```bash
 $ heroku login
   heroku: Press any key to open up the browser to login or q to exit: (press any key!)
 ```
@@ -46,7 +46,7 @@ That should have prompted you to a Heroku login page, where you need to type in 
 ## 4. A Step Before Deployment
 ### Install Gunicorn 
 To deploy your application on Heroku, you need to specify which web server your application is going to be running. We will use Gunicorn. We need to install this: 
-```console
+```bash
 $ pip install gunicorn
 $ pip freeze > requirements.txt
 ```
@@ -56,7 +56,7 @@ Note that we updated the `requirements.txt` above, because we added gunicorn as 
 ### Add a Procfile
 You will need to add a Procfile (don't add any extensions!) specifying a web server and your application name:  
 
-```console
+```bash
 $ vim Procfile
   web: gunicorn flaskrun: app
 ```
@@ -66,26 +66,26 @@ For those of you who are following along with your own application, please note 
 ## 5. Deploy Your Application
 Inside your project directory, run:  
 
-```console
+```bash
 $ heroku create YOURAPPNAME-api-heroku
 ```
 
 Once you run the command above, you will be able to see two different URLs:  
 
-```console
+```bash
 $ https://YOURAPPNAME-api-heroku.herokuapp.com | https://git.heroku.com/YOURAPPNAME-api-heroku.git
 ```
 
 The first URL above is where your application is deployed, so please save it somewhere safe. The second URL is the Heroku git repository, and for your application to go live, you need to push your work to the `master` branch of the Heroku repository.  
 
-```console
+```bash
 $ git push https://git.heroku.com/YOURAPPNAME-api-heroku.git master
 ```
 
 ## 6. Configuration on Heroku
 If you were using my tweet bot repository to follow along, you may have realized that there's a problem. Don't worry, we didn't do anything wrong. We just need to do one more thing. Because I used Twitter API keys for my tweet bot application (and that's considered sensitive information), I didn't push that information to my git repository. Locally, that information sits in a dotenv file, and on Heroku, we have to provide that information for our appliation to work. I won't be providing my own API keys, but you can go ahead and look [here](https://developer.twitter.com/en/docs/basics/authentication/guides/access-tokens) for official documentation on how to get your own Twitter API keys. Once you have your own keys ready, configure them on Heroku by doing the following inside your project directory:  
 
-```console
+```bash
 $ heroku config:set CONSUMER_KEY=YOUR-API-KEY
 $ heroku config:set CONSUMER_SECRET_KEY=YOUR-SECRET-KEY
 $ heroku config:set ACCESS_KEY=YOUR-ACCESS-KEY

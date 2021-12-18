@@ -26,7 +26,7 @@ All developers who have any level of experience with Python will probably agree 
 
 Create a virtual environment inside your project directory (assuming you are using Python 3):  
 
-```console
+```bash
 $ mkdir my_flask_app
 $ cd my_flask_app
 $ touch run.py
@@ -38,7 +38,7 @@ $ source venv/bin/activate
 
 Install the following dependencies using pip (assuming you have pip installed):  
 
-```console
+```bash
 $ pip install Flask Flask-FlatPages Pygments
 ```
 
@@ -61,7 +61,7 @@ if __name__ == "__main__":
 
 Now we have the most basic application ready to go, so let's run it:  
 
-```console
+```bash
 $ python run.py
  * Debug mode: on
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
@@ -107,7 +107,7 @@ if __name__ == "__main__":
 
 The code above should get your application ready to serve your Markdown files. All you need to do is put your Markdown files inside `./content/posts`:  
 
-```console
+```bash
 $ cd content
 $ cd posts
 $ touch my_first_post.md
@@ -134,7 +134,7 @@ Now we just need a HTML template to render this Markdown file into. As I mention
 
 One level under `my_flask_app` directory, let's create a directory called `template` and create `layout.html` and `blog_post.html` inside it:  
 
-```console
+```bash
 $ mkdir templates
 $ touch layout.html
 $ touch blog_post.html
@@ -230,13 +230,13 @@ def post(name):
 
 To customize how your code block looks, do something like this:  
 
-```console
+```bash
 $ pygmentize -L
 ```  
 
 The above code will print a list of built in themes available for your code blocks. To check out what the different themes look like (or customize the css based on your personal needs), run the following command inside `my_flask_app` directory:  
 
-```console
+```bash
 $ mkdir static
 $ cd static
 $ pygmentize -S THEMENAMEOFYOURCHOICE -f html -a .codehilite > pygs.css

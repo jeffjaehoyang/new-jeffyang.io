@@ -23,13 +23,13 @@ In this post, I will be writing specifically about how to deploy a Django Channe
 ## 3. Configuring Django Settings
 Environment variables play a big role in the separation of development and production environments. Rather than hard-coding environment variables (which is bad practice in general), setting separate environment variables in the local machine and Heroku deployment server makes life a lot easier for us developers. For macOS users, environment variables can be set in `.zshenv` or `.bash_profile` depending on your macOS version. The way I achieved a separation of settings for development and production environment was by conditionally setting production environment variables in a conditional where `DEBUG` is `False`. For this to work, the `DEBUG` value must be set to `True` in local settings, and to `False` in production. I used an environment variable named `DEBUG_VALUE` to dynamically assign the appropriate `DEBUG` value. You will also have to add an environment variable `SECRET_KEY`, which should not be hard-coded for production. We will deal with setting Heroku environment variables later. I also used `django_heroku`, which is an awesome package that automatically configures your Django application to work on Heroku. The use of `django_heroku` is in fact endorsed by Heroku, as it provides many niceties, including the reading of `DATABASE_URL`, logging configuration, a Heroku CI–compatible TestRunner, and an automatic configuration of ‘staticfiles’ to “just work” (according to Heroku).
 
-```console
+```bash
 $ pip install django_heroku
 ```
 
 Because a Django Channels application requires an ASGI server, we are going to need something different than a standard WSGI server such as Gunicorn. The Channels project maintains an official ASGI HTTP/WebSocket server, Daphne, which I will be using in my project. However, there are alternatives such as [uvicorn](https://www.uvicorn.org/), which is also known to be stable. Because of this extra layer of complication, there are a few different ways one can go about configuring appropriate web servers depending on needs. For example, you may choose to keep running standard HTTP requests through a WSGI server and use Daphne only for things WSGI cannot do, like HTTP long-polling and WebSockets. You may also opt to utilize Daphne for all HTTP and WebSocket traffic, in which case Daphne auto-negotiates between HTTP and Websocket. For my own project, I decided to use Daphne as the only server to handle all requests.  
 
-```console
+```bash
 $ pip install daphne
 ```
 
@@ -71,9 +71,11 @@ if not DEBUG:
 
 ### asgi.py
 Your `asgi.py` file should be located in the same directory as your `wsgi.py` file. 
-```console
+```bash
 $ touch asgi.py
 ```
+
+<br/>
 
 ```python
 # asgi.py
@@ -95,7 +97,7 @@ We are ready to move on to configuring Heroku now!
 ## 4. Configuring Heroku
 First, you will need to download the Heroku CLI. For more information, please take a look [here](https://devcenter.heroku.com/articles/heroku-cli#download-and-install). During this process, you should have been prompted to create a Heroku account (please make sure you do, you'll need that!) This first step should have been relatively simple and straightforward. Once you download the Heroku CLI, you will have to login.  
 
-```console
+```bash
 $ brew tap heroku/brew && brew install heroku # install Heroku CLI for macOS
 ...installation complete 
 $ heroku login
@@ -129,7 +131,7 @@ It seems like our push to `heroku master` just failed. We just need to configure
 
 ### Procfile
 To deploy any application on Heroku, you will need to add a `Procfile` (without '.txt', '.py' or any extensions) specifying a web server and your application name. Without the `Procfile`, Heroku will not be able to run a web server, which is needed to serve your application.<br>
-```console
+```bash
 $ # this file should be in your project's root directory 
 $ vim Procfile
 > web: daphne <your_application_name>.asgi:application --port $PORT --bind 0.0.0.0 -v2
@@ -137,7 +139,7 @@ $ vim Procfile
 
 ### Runtime.txt
 `runtime.txt` is not absolutely necessary, but is highly recommended if you are looking to specify the Python version you want your application to run on Heroku's servers.  
-```console
+```bash
 $ # this file should be in your project's root directory 
 $ vim runtime.txt
 > python-3.8.2
@@ -148,7 +150,7 @@ $ vim runtime.txt
 ### Requirements.txt
 Having a `requirements.txt` is necessary for Heroku to automatically setup their dynos (their Linux machines) for you. Your `requirements.txt` must have any and all dependencies that your application needs to run properly. It is important that you remember to update your `requirements.txt` file everytime you add an external dependency to your project. 
 
-```console
+```bash
 $ # this file should be in your project's root directory 
 $ pip freeze > requirements.txt
 ```
@@ -156,7 +158,7 @@ $ pip freeze > requirements.txt
 ### Addons
 You may have been using an SQLite database for development on your local machine. For production, however, using an SQLite database is not recommended. I decided to use Postgres for my application, which is a popular choice. Django Channels also requires a Redis instance to act as the channel layer, so we'll also need to add `heroku-redis`.
 
-```console
+```bash
 $ heroku addons:create heroku-postgresql
 $ heroku addons:create heroku-redis
 ```
@@ -164,7 +166,7 @@ $ heroku addons:create heroku-redis
 ### Environment Variables
 Setting environment variables for Heroku is very simple. They support configuration through both the Heroku CLI and their website dashboard. I configured mine through the CLI.
 
-```console
+```bash
 $ heroku config:set DEBUG_VALUE="False" # yes, "False" as a string!
 $ heroku config:set SECRET_KEY="your_secret_key_in_strings"
 ```
@@ -172,7 +174,7 @@ $ heroku config:set SECRET_KEY="your_secret_key_in_strings"
 ### Useful Heroku CLI Commands
 Here are a couple very useful Heroku CLI commands. 
 
-```console
+```bash
 $ heroku login 
 $ heroku restart # restarts the Heroku dyno
 $ heroku create <your_app_name>
@@ -190,7 +192,7 @@ $ heroku ps:scale web=1:<tier_name> # scale web dyno
 ## 5. Deploy Your Application
 Let's try it again now!  
 
-```console
+```bash
 $ git add -A
 $ git commit -m "deploying to heroku"
 $ git push heroku <your_branch_name>:master
@@ -226,7 +228,7 @@ remote: Verifying deploy... done.
 
 Seems like our application was successfully deployed! We just have one final step left; we need to initialize our database.
 
-```console
+```bash
 $ heroku run bash
 Running bash on ⬢ your-app-name... ⣷ connecting, run.3028 (Hobby)
 # inside the directory that has manage.py file, run the following

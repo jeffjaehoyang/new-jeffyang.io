@@ -40,14 +40,14 @@ The main reason why people find it tricky to properly set up ESLint and Prettier
 
 We first need to install ESLint using `npm` or `yarn`, whichever one you prefer. You can either install ESLint globally, or locally. I personally use ESLint for all of my projects now, so I installed ESLint globally. Even if installed globally, we will still have to set up specific configuration files for each specific projects. 
 
-```shell
+```bash
 # install eslint globally
 npm install -g eslint
 ```
 
 Now that we've installed ESLint globally, we need to install Prettier. As with ESLint, Prettier can either be installed locally as a dependency, or can be installed globally. As I like to use Prettier with all my projects, I will install it globally.
 
-```shell
+```bash
 # install prettier globally
 npm install -g prettier
 ```
@@ -62,7 +62,7 @@ You will need to install the appropriate extension/plugin for your code editor. 
 
 As I mentioned earlier, ESLint and Prettier will conflict with each other if not set up with care. Fortunately, because this is such a widely recognized problem, there are packages that are made to solve exactly this problem. We are going to install two different packages; `eslint-config-prettier` to exclude all ESLint rules that could conflict with Prettier, and `eslint-plugin-prettier` to integrate the Prettier rules into ESLint rules. This way, you won't have two different rules that conflict with each other. 
 
-```shell
+```bash
 npm install --save-dev eslint-config-prettier eslint-plugin-prettier
 ```
 
@@ -70,7 +70,7 @@ npm install --save-dev eslint-config-prettier eslint-plugin-prettier
 
 Now that we have that successfully installed those packages, we need to run some commands to initialize ESLint within our project.
 
-```shell
+```bash
 eslint --init
 ✔ How would you like to use ESLint? · style
 ✔ What type of modules does your project use? · esm
@@ -130,13 +130,13 @@ Once the setup is successful, you should see a file `eslintrc.{js/json/yaml}` ba
 
 Now, we just have to one final step. We need to set up Prettier locally, and tell Prettier how we want it to format our code. 
 
-```shell
+```bash
 # install prettier as local devDependency
 npm install --save-dev prettier
 ```
 That should have installed Prettier as a local `devDependency`. Now, we need to create a configuration file for Prettier, and tell it how to format our code. 
 
-```shell
+```bash
 # in your project root directory
 touch .prettierrc
 ```

@@ -1,14 +1,13 @@
-import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-import { motion, AnimatePresence } from 'framer-motion';
-
-import Header from 'components/Header';
-import Footer from 'components/Footer';
-import Newsletter from 'components/Newsletter';
-
 import 'assets/styles/global.css';
 import 'assets/styles/prismjs/syntax_theme.css';
+
 import GlobalStyles from 'assets/styles/globalStyles';
+import Footer from 'components/Footer';
+import Header from 'components/Header';
+import { AnimatePresence, motion } from 'framer-motion';
+import { graphql, useStaticQuery } from 'gatsby';
+import React from 'react';
+
 import * as Styled from './styles';
 
 interface Props {
