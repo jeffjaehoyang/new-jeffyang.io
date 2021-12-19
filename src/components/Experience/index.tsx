@@ -7,10 +7,11 @@ import FormatHtml from 'components/utils/FormatHtml';
 import { graphql, useStaticQuery } from 'gatsby';
 import { SectionTitle } from 'helpers/definitions';
 import React from 'react';
-import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
+import { Document, Page, pdfjs } from 'react-pdf/dist/esm/entry.webpack';
 
 import Resume from './resume.pdf';
 
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 interface Experience {
   node: {
     id: string;
@@ -66,7 +67,7 @@ const Experience: React.FC = () => {
       >
         Link to Resume
       </a>
-      <Document file={Resume} renderMode="svg">
+      <Document file={Resume} onLoadError={console.error} renderMode="svg">
         <Page pageNumber={1} scale={1.2} />
       </Document>
       {/* {experiences.map((item) => {
