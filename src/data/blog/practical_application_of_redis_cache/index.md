@@ -2,7 +2,7 @@
 category: 'blog'
 cover: './thumbnail.png'
 title: 'A Practical Application of Redis Cache'
-description: 'A simple guide to getting started with redis cache.'
+description: 'How a Redis cache can help solve problems when fetching data'
 date: '2021-12-18'
 tags: ['Web Development']
 published: true
@@ -62,7 +62,7 @@ I obviously cannot magically pull stock market data out of nowhere - I needed to
   }, []);
 ```
 
-It's a standard API call that would occur in the useEffect hook of a React functional component - which updates the state upon a successful retrieval of data from the API request. This implementation *works*, but what would happen if someone had 5 stocks registered and hit the refresh button 3 times? That would be 15 API calls in the span of 5 seconds - and this is problematic in two ways. Firstly, the free tier API service that I used only supports up to 5 API calls per minute. Secondly, this naive implementation would be suboptimal in terms of user experience, since every single render of the component would need to wait for the API to return data. This is where caching can help us significantly. If we can cache the data returned by the API somewhere, we would be able to fetch data that has been requested previously right from the cache instead of waiting for the API to respond. That's *exactly* where Redis comes to the rescue!
+It's a standard API call that would occur in the `useEffect` hook of a React functional component - which updates the state upon a successful retrieval of data from the API request. This implementation *works*, but what would happen if someone had 5 stocks registered and hit the refresh button 3 times? That would be 15 API calls in the span of 5 seconds - and this is problematic in two ways. Firstly, the free tier API service that I used only supports up to 5 API calls per minute. Secondly, this naive implementation would be suboptimal in terms of user experience, since every single render of the component would need to wait for the API to return data. This is where caching can help us significantly. If we can cache the data returned by the API somewhere, we would be able to fetch data that has been requested previously right from the cache instead of waiting for the API to respond. That's *exactly* where Redis comes to the rescue!
 
 ## 3. Setting up Redis Within an Express Application
 
@@ -145,7 +145,7 @@ app.get("/stockData", async (req, res) => {
 });
 ```
 
-Relatively simple and straightforward implementation, right? Redis has an extremely friendly API and makes for a delightful developer experience. With minimal amount of code, you can bring drastic changes to the logic of your code for the better. If you want to check the redis cache yourself, you can do the following: 
+Relatively simple and straightforward implementation, right? Redis has an extremely friendly API and makes for a delightful developer experience. With minimal amount of code, you can bring drastic changes to the logic of your code for the better. If you want to check the Redis cache yourself, you can do the following: 
 
 ```bash
 $ redis-cli
@@ -161,7 +161,7 @@ Next, let us check if Redis actually helped us achieve our goals - how much fast
 
 ## 4. Measuring Performance with Redis Implementation
 
-It'd be interesting to see how much of a difference redis can make - how much faster is it with Redis? To test this, let's first try requesting data over the API that is not stored in cache.
+It'd be interesting to see how much of a difference Redis can make - how much faster is it with Redis? To test this, let's first try requesting data over the API that is not stored in cache.
 
 ```bash
 // verify that there is no data stored
@@ -169,7 +169,7 @@ It'd be interesting to see how much of a difference redis can make - how much fa
 (nil)
 ```
 
-Using Chrome Developer Tools, we can inspect the intricate details of networking operations. The screenshot below shows how long it took for the API request to process. "Waiting (TTFB)"  indicates total time for the sent request to get to the destination (in this case the Express backend), then for the destination to process the request, and finally for the response to traverse the networks back to the client. It took *7.5 seconds* for an API call asking for historical market data on Netflix stocks. 
+Using Chrome Developer Tools, we can inspect the intricate details of networking operations. The screenshot below shows how long it took for the API request to process. "Waiting (TTFB)"  indicates total time for the sent request to get to the destination (in this case the Express backend), then for the destination to process the request, and finally for the response to traverse the networks back to the client. It took **7.5 seconds** for an API call asking for historical market data on Netflix stocks. 
 
 ![API call without cache](./without_cache.png)
 
