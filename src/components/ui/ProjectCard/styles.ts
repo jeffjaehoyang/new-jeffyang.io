@@ -6,7 +6,7 @@ export interface StyledProps {
 }
 
 export const ProjectCard = styled.div<StyledProps>`
-  ${tw`flex flex-col p-4 mx-3 my-4 text-indigo-900 bg-white border border-gray-300 rounded-lg`};
+  ${tw`flex flex-col p-4 mx-3 my-4 text-indigo-900 bg-white border-2 border-gray-300 rounded-lg`};
   ${({ center }) => center && tw`items-center`};
 `;
 

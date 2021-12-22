@@ -10,7 +10,7 @@ export const Post = styled.div`
 `;
 
 export const Card = styled.div`
-  ${tw`flex flex-col w-full h-full overflow-hidden border border-gray-300 rounded-lg`};
+  ${tw`flex flex-col w-full h-full overflow-hidden border-2 border-gray-300 rounded-lg`};
 `;
 
 export const Content = styled.div`
