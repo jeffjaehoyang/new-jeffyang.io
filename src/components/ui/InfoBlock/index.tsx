@@ -24,7 +24,7 @@ const getDaysDifference = (dt1: Date, dt2: Date) => {
 const InfoBlock: React.FC<Props> = ({ title, description, tags, date, center, readingTime }) => (
   <Styled.InfoBlock center={center}>
     {getDaysDifference(new Date(date), new Date()) > 30 ? (
-      <MdOutlineFiberPin className="absolute text-3xl text-indigo-500" style={{ top: -2, left: 5 }} />
+      <MdOutlineFiberPin className="absolute text-3xl text-teal-600" style={{ top: -2, left: 5 }} />
     ) : (
       <MdOutlineFiberNew className="absolute text-3xl text-red-600" style={{ top: -2, left: 5 }} />
     )}

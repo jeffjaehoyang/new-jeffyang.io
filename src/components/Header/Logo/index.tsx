@@ -1,10 +1,9 @@
-import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
+import { ImageSharpFluid } from 'helpers/definitions';
+import React from 'react';
 
 import * as Styled from './styles';
-
-import { ImageSharpFluid } from 'helpers/definitions';
 
 const Logo: React.FC = () => {
   const { site, placeholderImage } = useStaticQuery(graphql`

@@ -1,8 +1,7 @@
 import React from 'react';
 
-import MainNav from './MainNav';
 import Logo from './Logo';
-
+import MainNav from './MainNav';
 import * as Styled from './styles';
 
 interface Props {

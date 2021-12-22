@@ -34,7 +34,7 @@ export const Tags = styled.div`
 `;
 
 export const Tag = styled.span`
-  ${tw`px-2 py-1 mr-2 text-xs text-indigo-900 border border-teal-400 rounded-full`}
+  ${tw`px-2 py-1 mr-2 text-xs text-indigo-900 bg-indigo-100 border border-indigo-300 rounded-md`}
 `;
 
 export const Date = styled.h3`

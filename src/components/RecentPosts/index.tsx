@@ -28,7 +28,7 @@ interface RecentPosts {
 const RecentPosts: React.FC = () => {
   const { markdownRemark, allMarkdownRemark } = useStaticQuery(graphql`
     query {
-      markdownRemark(frontmatter: { category: { eq: "recent posts section" } }) {
+      markdownRemark(frontmatter: { category: { eq: "featured posts" } }) {
         frontmatter {
           title
           subtitle

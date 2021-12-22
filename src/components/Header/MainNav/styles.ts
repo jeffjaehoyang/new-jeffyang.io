@@ -1,7 +1,7 @@
+import { motion } from 'framer-motion';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
-import { Link } from 'gatsby';
-import { motion } from 'framer-motion';
 
 interface StyledProps {
   open: boolean;
@@ -13,24 +13,11 @@ export const MainNav = styled.nav<StyledProps>`
 `;
 
 export const MainNavItem = motion.custom(styled(Link)`
-  ${tw`relative mt-3 ml-0 text-indigo-900 border-b border-transparent hover:text-indigo-900 sm:ml-8 sm:mt-0`};
+  ${tw`relative mt-3 ml-0 text-indigo-900 border-b-2 border-transparent hover:text-indigo-900 sm:mr-8 sm:mt-0`};
   width: max-content;
 
   &.active {
-    ${tw`border-indigo-400`};
-  }
-
-  &:before {
-    ${tw`absolute left-0 invisible w-full h-px bg-indigo-400`};
-    content: '';
-    bottom: -1px;
-    transform: scaleX(0);
-    transition: 0.2s;
-  }
-
-  &:hover:before {
-    ${tw`visible`};
-    transform: scaleX(1);
+    ${tw`border-teal-500`};
   }
 `);
 

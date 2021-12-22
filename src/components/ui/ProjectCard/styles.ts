@@ -6,16 +6,16 @@ export interface StyledProps {
 }
 
 export const ProjectCard = styled.div<StyledProps>`
-  ${tw`flex flex-col my-4 mx-3 p-4 bg-white rounded-lg border border-gray-300 text-indigo-900`};
+  ${tw`flex flex-col p-4 mx-3 my-4 text-indigo-900 bg-white border border-gray-300 rounded-lg`};
   ${({ center }) => center && tw`items-center`};
 `;
 
 export const TagsAndIcons = styled.div`
-  ${tw`flex flex-row justify-between content-center`}
+  ${tw`flex flex-row content-center justify-between`}
 `;
 
 export const Icon = styled.span`
-  ${tw`flex items-center w-8 h-8 pt-4 mt-auto justify-center text-indigo-500 border border-purple-400 rounded-full`};
+  ${tw`flex items-center justify-center w-8 h-8 pt-4 mt-auto text-indigo-500 border border-purple-400 rounded-full`};
 `;
 
 export const Icons = styled.span`
@@ -27,7 +27,7 @@ export const Wrapper = styled.div<StyledProps>`
 `;
 
 export const Title = styled.h3`
-  ${tw`text-md mt-1 font-bold`};
+  ${tw`mt-1 font-bold text-md`};
 `;
 
 export const Content = styled.p`
@@ -39,7 +39,7 @@ export const Tags = styled.div`
 `;
 
 export const Tag = styled.span`
-  ${tw`text-xs text-indigo-900 border border-teal-400 rounded-full px-2 py-1 mr-2`}
+  ${tw`px-2 py-1 mr-2 text-xs text-indigo-900 bg-indigo-100 border border-indigo-300 rounded-md`}
 `;
 
 export const Date = styled.h3`

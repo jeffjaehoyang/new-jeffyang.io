@@ -1,5 +1,4 @@
 import Container from 'components/ui/Container';
-import ProgressBar from 'components/ui/ProgressBar';
 import TitleSection from 'components/ui/TitleSection';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
@@ -8,20 +7,10 @@ import React from 'react';
 
 import * as Styled from './styles';
 
-interface Skill {
-  node: {
-    id: string;
-    frontmatter: {
-      title: string;
-      percentage: number;
-    };
-  };
-}
-
 const Skills: React.FC = () => {
   const { markdownRemark, placeholderImage } = useStaticQuery(graphql`
     query {
-      markdownRemark(frontmatter: { category: { eq: "skills section" } }) {
+      markdownRemark(frontmatter: { category: { eq: "techstack" } }) {
         frontmatter {
           title
           subtitle

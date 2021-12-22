@@ -1,6 +1,6 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
-import { motion } from 'framer-motion';
 
 export interface StyledProps {
   primary?: boolean;
@@ -9,7 +9,7 @@ export interface StyledProps {
 
 export const Button = motion.custom(styled.button<StyledProps>`
   outline: none !important;
-  ${tw`px-8 py-2 text-indigo-900 border border-indigo-900 rounded-full`};
+  ${tw`px-4 py-2 text-indigo-900 border border-indigo-900 rounded-md`};
 
   ${({ primary }) => (primary ? tw`bg-transparent` : tw`text-indigo-600`)};
 

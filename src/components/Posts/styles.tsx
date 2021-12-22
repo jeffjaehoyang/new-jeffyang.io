@@ -2,15 +2,15 @@ import styled from 'styled-components';
 import tw from 'tailwind.macro';
 
 export const Posts = styled.div`
-  ${tw`w-full flex flex-wrap`};
+  ${tw`flex flex-wrap w-full`};
 `;
 
 export const Post = styled.div`
-  ${tw`w-full sm:w-1/2 p-3`};
+  ${tw`w-full p-3 sm:w-1/2`};
 `;
 
 export const Card = styled.div`
-  ${tw`w-full h-full rounded-lg flex flex-col overflow-hidden border border-gray-300`};
+  ${tw`flex flex-col w-full h-full overflow-hidden border border-gray-300 rounded-lg`};
 `;
 
 export const Content = styled.div`
@@ -22,7 +22,7 @@ export const Image = styled.figure`
 `;
 
 export const Title = styled.h3`
-  ${tw`font-semibold mb-4`};
+  ${tw`mb-4 font-semibold`};
 `;
 
 export const Description = styled.p``;
@@ -36,5 +36,5 @@ export const Tags = styled.div`
 `;
 
 export const Tag = styled.span`
-  ${tw`text-xs text-indigo-900 border border-teal-400 rounded-full px-2 py-1 mr-2`}
+  ${tw`px-2 py-1 mr-2 text-xs text-indigo-900 bg-indigo-100 border border-indigo-300 rounded-md`}
 `;

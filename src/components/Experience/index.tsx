@@ -1,12 +1,11 @@
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 
 import Container from 'components/ui/Container';
-import Timeline from 'components/ui/Timeline';
 import TitleSection from 'components/ui/TitleSection';
-import FormatHtml from 'components/utils/FormatHtml';
 import { graphql, useStaticQuery } from 'gatsby';
 import { SectionTitle } from 'helpers/definitions';
 import React from 'react';
+import { ImFilePdf } from 'react-icons/im';
 import { Document, Page, pdfjs } from 'react-pdf/dist/esm/entry.webpack';
 
 import Resume from './resume.pdf';
@@ -65,7 +64,10 @@ const Experience: React.FC = () => {
         href="https://www.dropbox.com/s/5f0yjzryv795q57/jeff-public-resume.pdf?dl=0"
         target="_blank"
       >
-        Link to Resume
+        <span className="flex flex-row items-center justify-center">
+          Download PDF
+          <ImFilePdf className="ml-1" />
+        </span>
       </a>
       <Document file={Resume} onLoadError={console.error} renderMode="svg">
         <Page pageNumber={1} scale={1.2} />
