@@ -1,5 +1,5 @@
 ---
 category: 'skills'
-title: 'Photoshop'
+title: 'Javascript'
 percentage: 58
 ---
