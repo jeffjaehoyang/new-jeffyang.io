@@ -17,7 +17,7 @@ export const MainNavItem = motion.custom(styled(Link)`
   width: max-content;
 
   &.active {
-    ${tw`border-teal-500`};
+    ${tw`border-teal-600`};
   }
 `);
 

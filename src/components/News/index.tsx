@@ -1,10 +1,12 @@
-import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import NewsByYear from 'components/NewsByYear';
+import { Accordion } from 'components/ui/Accordion';
 import Container from 'components/ui/Container';
 import TitleSection from 'components/ui/TitleSection';
+import { graphql, useStaticQuery } from 'gatsby';
 import { SectionTitle } from 'helpers/definitions';
+import React from 'react';
+
 import * as Styled from './styles';
-import NewsByYear from 'components/NewsByYear';
 
 interface News {
   node: {
@@ -65,8 +67,14 @@ const News: React.FC = () => {
 
           return (
             <Styled.NewsItem key={id}>
-              <Styled.Date>{year}</Styled.Date>
-              <NewsByYear year={year} />
+              {Number(year) >= 2021 ? (
+                <>
+                  <Styled.Date>{year}</Styled.Date>
+                  <NewsByYear year={year} />
+                </>
+              ) : (
+                <Accordion year={year} content={<NewsByYear year={year} />} />
+              )}
             </Styled.NewsItem>
           );
         })}

@@ -1,8 +1,9 @@
-import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
 import Container from 'components/ui/Container';
+import { graphql, useStaticQuery } from 'gatsby';
+import React from 'react';
+import { FiCheckCircle } from 'react-icons/fi';
+
 import * as Styled from './styles';
-import Icon from 'components/ui/Icon';
 
 interface News {
   node: {
@@ -55,7 +56,7 @@ const NewsByYear: React.FC<Props> = ({ year }) => {
           return (
             <Styled.NewsItem key={id}>
               <Styled.Title>
-                <Icon icon={['fal', 'check-circle']} style={{ marginRight: 10, color: 'green' }} />
+                <FiCheckCircle className="mr-2 text-green-700" style={{ minHeight: 17, minWidth: 17 }} />
                 {content}
               </Styled.Title>
               <Styled.Explanation>{explanation}</Styled.Explanation>

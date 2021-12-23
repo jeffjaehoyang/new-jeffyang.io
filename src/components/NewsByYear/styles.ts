@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import tw from 'tailwind.macro';
 
 export const News = styled.div`
-  ${tw`max-w-screen-md mx-auto w-full px-0 mb-4`};
+  ${tw`w-full max-w-screen-md px-0 mx-auto mb-4`};
 `;
 
 export const NewsItem = styled.div`
@@ -14,7 +14,7 @@ export const Date = styled.div`
 `;
 
 export const Title = styled.div`
-  ${tw`flex items-center my-4 text-indigo-900 font-bold`};
+  ${tw`flex items-center my-4 font-bold text-indigo-900`};
 `;
 
 export const Explanation = styled.div`

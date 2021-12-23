@@ -1,5 +1,5 @@
 import Container from 'components/ui/Container';
-import Icon, { IconProps } from 'components/ui/Icon';
+import Icon from 'components/ui/Icon';
 import React from 'react';
 
 import * as Styled from './styles';
