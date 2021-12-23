@@ -1,17 +1,17 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import Link from 'gatsby-link';
-
+import Bio from 'components/Bio';
+import Commento from 'components/Commento';
 import Layout from 'components/Layout';
 import SEO from 'components/SEO';
+import Share from 'components/Share';
 import Container from 'components/ui/Container';
 import TitleSection from 'components/ui/TitleSection';
 import MarkdownHtml from 'components/utils/MarkdownHtml';
-import Share from 'components/Share';
-import Commento from 'components/Commento';
+import { graphql } from 'gatsby';
+import Link from 'gatsby-link';
+import React, { useEffect } from 'react';
 
+import incrementViews from '../../lib/increment-views';
 import * as Styled from './styles';
-import Bio from 'components/Bio';
 
 interface Post {
   html: React.ReactNode;
@@ -41,6 +41,10 @@ const BlogPost: React.FC<Props> = ({ data, pageContext }) => {
   const post = data.markdownRemark;
   const site = data.site.siteMetadata;
   const { previous, next } = pageContext;
+
+  useEffect(() => {
+    incrementViews(post.fields.slug.split('/')[2]);
+  }, []);
 
   return (
     <Layout>

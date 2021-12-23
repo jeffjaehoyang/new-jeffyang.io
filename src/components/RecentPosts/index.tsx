@@ -86,6 +86,7 @@ const RecentPosts: React.FC = () => {
                     tags={tags}
                     date={date}
                     readingTime={readingTime.text}
+                    slug={slug}
                   />
                 </Link>
               </motion.div>

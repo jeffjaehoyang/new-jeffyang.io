@@ -38,5 +38,5 @@ export const Tag = styled.span`
 `;
 
 export const Date = styled.h3`
-  ${tw`pt-4 text-xs text-indigo-900`};
+  ${tw`flex flex-row items-center justify-between pt-4 text-xs text-indigo-900`};
 `;

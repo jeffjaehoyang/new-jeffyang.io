@@ -32,7 +32,7 @@ export const Date = styled.h3`
 `;
 
 export const Tags = styled.div`
-  ${tw`p-4 pt-2 mt-auto`}
+  ${tw`flex flex-row items-center justify-between p-4 pt-2 mt-auto`}
 `;
 
 export const Tag = styled.span`

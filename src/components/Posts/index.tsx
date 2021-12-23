@@ -1,13 +1,12 @@
-import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
-import Link from 'gatsby-link';
-import { motion } from 'framer-motion';
-
 import Container from 'components/ui/Container';
 import TitleSection from 'components/ui/TitleSection';
-
-import { SectionTitle, ImageSharpFluid } from 'helpers/definitions';
+import ViewCounter from 'components/ViewCounter';
+import { motion } from 'framer-motion';
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
+import Link from 'gatsby-link';
+import { ImageSharpFluid, SectionTitle } from 'helpers/definitions';
+import React from 'react';
 
 import * as Styled from './styles';
 
@@ -107,6 +106,7 @@ const Posts: React.FC = () => {
                       {tags.map((item) => (
                         <Styled.Tag key={item}>{item}</Styled.Tag>
                       ))}
+                      <ViewCounter id={slug.split('/')[2]} />
                     </Styled.Tags>
                   </Styled.Card>
                 </motion.div>

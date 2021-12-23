@@ -1,3 +1,4 @@
+import ViewCounter from 'components/ViewCounter';
 import React from 'react';
 import { MdOutlineFiberNew, MdOutlineFiberPin } from 'react-icons/md';
 
@@ -9,6 +10,7 @@ interface Props extends Styled.StyledProps {
   tags: Array<string>;
   date: string;
   readingTime: string;
+  slug: string;
 }
 
 const getDaysDifference = (dt1: Date, dt2: Date) => {
@@ -21,7 +23,7 @@ const getDaysDifference = (dt1: Date, dt2: Date) => {
   return Math.round(diffDays);
 };
 
-const InfoBlock: React.FC<Props> = ({ title, description, tags, date, center, readingTime }) => (
+const InfoBlock: React.FC<Props> = ({ title, description, tags, date, center, readingTime, slug }) => (
   <Styled.InfoBlock center={center}>
     {getDaysDifference(new Date(date), new Date()) > 30 ? (
       <MdOutlineFiberPin className="absolute text-3xl text-teal-600" style={{ top: -2, left: 5 }} />
@@ -33,6 +35,7 @@ const InfoBlock: React.FC<Props> = ({ title, description, tags, date, center, re
       <Styled.Content>{description}</Styled.Content>
       <Styled.Date>
         {date} • {readingTime}
+        <ViewCounter id={slug.split('/')[2]} />
       </Styled.Date>
       <Styled.Tags>
         {tags.map((item) => (
