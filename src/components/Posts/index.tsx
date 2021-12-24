@@ -92,21 +92,23 @@ const Posts: React.FC = () => {
               <Link to={slug}>
                 <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 1 }}>
                   <Styled.Card>
-                    <Styled.Image>
-                      <Img fluid={cover.childImageSharp.fluid} alt={title} />
-                    </Styled.Image>
+                    {/* <Styled.Image>
+                      <Img fluid={cover.childImageSharp.fluid} alt={title} style={{ maxHeight: 200, minHeight: 200 }} />
+                    </Styled.Image> */}
                     <Styled.Content>
+                      <Styled.Title>
+                        {title}
+                        <ViewCounter id={slug.split('/')[2]} />
+                      </Styled.Title>
+                      <Styled.Description>{description}</Styled.Description>
                       <Styled.Date>
                         {date} • {readingTime.text}
                       </Styled.Date>
-                      <Styled.Title>{title}</Styled.Title>
-                      <Styled.Description>{description}</Styled.Description>
                     </Styled.Content>
                     <Styled.Tags>
                       {tags.map((item) => (
                         <Styled.Tag key={item}>{item}</Styled.Tag>
                       ))}
-                      <ViewCounter id={slug.split('/')[2]} />
                     </Styled.Tags>
                   </Styled.Card>
                 </motion.div>

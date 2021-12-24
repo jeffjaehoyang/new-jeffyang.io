@@ -2,19 +2,19 @@ import styled from 'styled-components';
 import tw from 'tailwind.macro';
 
 export const Posts = styled.div`
-  ${tw`flex flex-wrap w-full`};
+  ${tw`flex flex-wrap w-full mt-8`};
 `;
 
 export const Post = styled.div`
-  ${tw`w-full p-3 sm:w-1/2`};
+  ${tw`w-full`};
 `;
 
 export const Card = styled.div`
-  ${tw`flex flex-col w-full h-full overflow-hidden border-2 border-gray-300 rounded-lg`};
+  ${tw`flex flex-col w-full h-full mb-10 overflow-hidden`};
 `;
 
 export const Content = styled.div`
-  ${tw`p-4 text-indigo-900`};
+  ${tw`mb-2 text-indigo-900`};
 `;
 
 export const Image = styled.figure`
@@ -22,17 +22,17 @@ export const Image = styled.figure`
 `;
 
 export const Title = styled.h3`
-  ${tw`mb-4 font-semibold`};
+  ${tw`flex flex-col mb-4 font-semibold sm:items-center sm:justify-between sm:flex-row sm:text-xl`};
 `;
 
 export const Description = styled.p``;
 
 export const Date = styled.h3`
-  ${tw`text-xs text-indigo-500`};
+  ${tw`text-xs`};
 `;
 
 export const Tags = styled.div`
-  ${tw`flex flex-row items-center justify-between p-4 pt-2 mt-auto`}
+  ${tw`flex flex-row items-center justify-between`}
 `;
 
 export const Tag = styled.span`
