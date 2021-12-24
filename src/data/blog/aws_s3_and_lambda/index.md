@@ -89,7 +89,7 @@ def lambda_handler(event, context):
 
 With the function written above, we can try to follow [guidelines](https://docs.aws.amazon.com/lambda/latest/dg/python-package.html) provided by Amazon to deploy our function as a package. Doing just that, I personally ran into issues with `Pillow`:  
 
-```console 
+```bash 
 ImportError: "Unable to import module 'lambda_function': cannot import name '_imaging' from 'PIL'
 ```
 
@@ -99,7 +99,7 @@ It is difficult to say whether or not you will run into the same issue. For me, 
 
 After gaining confidence in where the general problem lies in, I narrowed down the issue: the problem seemed to be that the module `PIL` is already installed in the Python version that amazonlinux runs. `PIL` is shipped with Python by default, which is also the case in my local environment, except I can do:  
 
-```console
+```bash
 $ pip uninstall PIL
 $ pip install Pillow 
 ```
@@ -116,7 +116,7 @@ Docker technology is simply life-saving. I have no intensive background in worki
 
 Let's get started by spinning up a Docker container. This Docker container will be able to see the lambda function code that you have written.  
 
-```console
+```bash
 $ brew cask install docker
 $ cd /your/path/to/aws_lambda_function
 $ docker run -v <directory your code is in>:/aws_lambda -it --rm ubuntu
@@ -130,13 +130,13 @@ The docker command above does the following:
 * `ubuntu` is the name of an official container, Ubuntu. If this container image isn’t already on your machine, Docker will download it for you.
 
 You should now see something like this: 
-```console
+```bash
 root@c1996f32a397:/#
 ```
 
 We now have to do a couple of "Ubuntu" things, before we can start baking the package to deploy on AWS Lambda.  
 
-```console
+```bash
 $ apt-get update
 $ apt-get install python3-pip
 $ apt-get install zip
@@ -144,7 +144,7 @@ $ apt-get install zip
 
 That just got us everything we need to start installing our dependencies within the Docker container. What we are about to do is fairly simple, and is documented in the AWS [documentation](https://docs.aws.amazon.com/lambda/latest/dg/python-package.html). The only difference is that we are doing it within a Docker container instead of your local machine.  
 
-```console
+```bash
 $ cd aws_lambda 
 $ ls # you should be able to see your function source code here 
 lambda_function.py

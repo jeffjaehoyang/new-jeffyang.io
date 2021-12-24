@@ -15,7 +15,7 @@ According to recent research conducted by USC and Indiana University affiliates,
 ## 1. Getting Ready - The Basics  
 As I always emphasize, when starting Python projects, it's a good idea to default to creating a Python virtual environment for the specific project that you are working on. So let's do just that:  
 
-```console
+```bash
 $ mkdir my_twitter_bot
 $ cd my_twitter_bot
 $ python3 -m venv venv
@@ -24,7 +24,7 @@ $ source venv/bin/activate
 
 Once we have our virtual environment ready, we are going to need to install some dependencies that we need for this project. For now, let us install the non-trivial dependencies that are must-haves to create a fully functioning Twitter bot. Make sure that you have your `my_twitter_bot` virtual environment activated!  
 
-```console
+```bash
 $ #we are going to need BS4 for web scraping purposes
 $ pip install beautifulsoup4 
 $ #we need tweepy to seamlessly interact with the Twitter API 
@@ -138,7 +138,7 @@ To connect our bot to Twitter, we first need to somehow programmatically access 
 
 Before we just copy and paste these API keys straight into our code, we need to first ask ourselves if it's a good idea to hard-code configurations. My code is also pushed up to Github, which means that other people are going to be able to see it too. *Uh-oh*. Then it would be a good idea to encapsulate our API keys with a layer of protection, so other people don't have access to sensitive information, right? Fortunately, Python's dotenv module provides a fantastic way to get around such issues. After installing the dotenv package, you will need to create a `.env` file inside your project directory and store your sensitive information there.  
 
-```console
+```bash
 $ pip install python-dotenv
 $ pip freeze > requirements.txt
 $ touch .env
@@ -212,7 +212,7 @@ if __name__ == '__main__':
 
 You will need to create a HTML file `index.html` and put it in a directory called `templates`:  
 
-```console
+```bash
 $ #inside your project directory
 $ mkdir templates
 $ touch index.html

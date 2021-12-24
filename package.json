@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-personal-website-starter",
+  "name": "jeffyang.io",
   "private": true,
-  "description": "Gatsby Markdown Personal Website Starter, using Typescript, Styled Components, Tailwindcss and Framer Motion.",
+  "description": "Personal Blog by Jeff Yang",
   "version": "0.1.0",
-  "author": "Saimir Kapaj",
+  "author": "Jeff Yang",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-brands-svg-icons": "^5.13.0",

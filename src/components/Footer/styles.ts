@@ -6,15 +6,15 @@ export const Footer = styled.footer`
 `;
 
 export const Links = styled.div`
-  ${tw`flex items-center justify-center w-full`};
+  ${tw`flex flex-row items-center justify-center w-full`};
 
   a {
-    ${tw`mx-2 text-white hover:text-indigo-600`};
+    ${tw`mx-2 text-white hover:text-indigo-100`};
   }
 `;
 
 export const Link = styled.a`
-  ${tw`mx-2 text-white hover:text-indigo-600`};
+  ${tw`mx-2 text-white hover:text-indigo-100`};
 `;
 
 export const Copyright = styled.div`

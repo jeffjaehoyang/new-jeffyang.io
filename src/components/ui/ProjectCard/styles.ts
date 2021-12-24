@@ -18,8 +18,8 @@ export const Icon = styled.span`
   ${tw`flex items-center justify-center w-8 h-8 pt-4 mt-auto text-indigo-500 border border-purple-400 rounded-full`};
 `;
 
-export const Icons = styled.span`
-  ${tw`pt-4 mt-auto`}
+export const Icons = styled.div`
+  ${tw`flex flex-row items-center pt-4 mt-auto`}
 `;
 
 export const Wrapper = styled.div<StyledProps>`

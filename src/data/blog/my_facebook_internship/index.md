@@ -10,13 +10,18 @@ published: true
 
 ![Blog Post Thumbnail](./facebook-logo.jpeg)
 
-Working as a software engineer at Facebook. For quite some time, this has been my "dream". I started my journey in computer science as a freshman in college - little did I know that this journey would take me to the heart of silicon valley. In this blog post, I'd like to share my experience of working as a software engineering intern at Facebook. For those who are trying to gauge if Facebook might be a good fit - I hope this post will provide some valuable insight. For those who are in the grind for
-an internship search - I hope this will serve as a source of inspiration to keep going.
+I started my journey in computer science as a freshman in college. Little did I know, this journey would take me to the heart of Silicon Valley.
+
+In this blog post, I share my experience as a software engineer intern at Facebook. For those who are trying to gauge if Facebook is the right fit - I hope this post will provide valuable insight. For those who are on the grind for an internship - I hope this will serve as a source of inspiration to keep going. Facebook seemed like a pipe dream, but through grit and little bit of luck, I'm really happy to have made the impossible possible.
 
 ### Application Process
-My journey to landing an offer with Facebook was far from a typical one. Often the greatest challenge in landing a software engineering gig at one of the highly sought-after tech companies is getting the interview itself. The competition for these positions is ridiculous with tens of thousands of students competing for a handful of spots. As you can imagine, a resume drop through LinkedIn or companies' job portal probably won't get you too far. Usually getting a referral from a current
-employee is your best bet (I would highly recommend anyone reading this post to get a referral if applying to Facebook). However, my journey with Facebook started out a bit differently - in some ways, I got lucky. A recruiter reached out to me on Piazza's career portal after taking a look at my resume (Piazza is a learning management site used by many professors at my university). Frankly speaking, it was the unlikeliest of all places for a Facebook university recruiter to
-be reaching out. But it happened (in 2019 fall). I was handed an interview - but my first attempt at cracking the Facebook coding interview was unsuccessful. Fast-forward to 2020 fall (exactly a year later), I contacted the same recruiter that helped me through the process a year ago. Luckily, I was given a chance to interview again - this time, I was able to crack the two rounds of technical interviews. A couple days after completing the second round interview, I received a call from the recruiter with a formal offer to join Facebook for 2021 summer as a software engineer intern. It felt surreal.
+In tech, the greatest challenge is landing the interview itself. The competition for a software engineering gig is borderline ridiculous, with tens of thousands of students competing for only a handful of available spots. A LinkedIn resume drop or applying through a portal will only get you so far, and many times, without an interview.
+
+My recommendation is to at least submit your application alongside a referral from a current employee of that company. For anyone applying to Facebook, I would highly recommend asking for a referral from someone who can speak to your qualities as an engineer.
+
+However, my journey with Facebook started out a bit differently—I got lucky. A recruiter reached out to me on Piazza, a learning management site used by professors at my university, after viewing my resume. Frankly, it was the unlikeliest of all places for a Facebook recruiter to be reaching out. But it happened. I was invited to interview — but my first attempt at cracking the coding interview was unsuccessful.
+
+Exactly a year later, in Fall 2020, I gathered the courage to contact the same recruiter who reached out to me so many months ago. I was lucky enough to be granted a chance to interview again. This time, I was able to crack both rounds of technical interviews. A couple days after the second round, I received a call from the recruiter with a formal offer to join Facebook for Summer 2021 as a software engineer intern. It felt surreal.
 
 ![Facebook Recruiter Message on Piazza Careers](./facebook-piazza.png)
 

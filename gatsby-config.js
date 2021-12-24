@@ -139,8 +139,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-personal-website-starter`,
-        short_name: `starter`,
+        name: `Personal Blog by Jeff Yang`,
+        short_name: `jeffyang.io`,
         start_url: `/`,
         background_color: `#3b366a`,
         theme_color: `#3b366a`,

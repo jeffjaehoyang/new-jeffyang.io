@@ -1,7 +1,8 @@
 import React from 'react';
-import Icon, { IconProps } from 'components/ui/Icon';
+import { RiExternalLinkLine } from 'react-icons/ri';
+import { VscGithub } from 'react-icons/vsc';
+
 import * as Styled from './styles';
-import Link from 'gatsby-link';
 
 interface Props extends Styled.StyledProps {
   projectName: string;
@@ -32,12 +33,12 @@ const ProjectsCard: React.FC<Props> = ({
         <Styled.Icons>
           {projectLink && (
             <a href={projectLink} className={'text-indigo-900'}>
-              <Icon icon={['fas', 'link']} style={{ height: '20', width: '20' }} />
+              <RiExternalLinkLine className="w-5 h-5" />
             </a>
           )}
           {githubRepo && (
             <a href={githubRepo} className={'text-indigo-900'}>
-              <Icon icon={['fab', 'github']} style={{ marginLeft: 10, height: '20', width: '20' }} />
+              <VscGithub className="w-5 h-5 ml-2" />
             </a>
           )}
         </Styled.Icons>
