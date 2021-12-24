@@ -1,5 +1,5 @@
 ---
 category: 'blog section'
 title: 'Blog'
-subtitle: 'Thoughts on Code'
+subtitle: 'I write what I learn'
 ---

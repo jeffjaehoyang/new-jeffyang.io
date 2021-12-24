@@ -1,12 +1,6 @@
 import firebase from 'gatsby-plugin-firebase';
-// ViewCounter.js
 import React, { useEffect, useState } from 'react';
-import { BsSunglasses, BsEyeglasses, BsLightningChargeFill } from 'react-icons/bs';
-import { BiGlasses } from 'react-icons/bi';
-import { FaGlassCheers } from 'react-icons/fa';
-import { FcBarChart } from 'react-icons/fc';
-import { MdBolt } from 'react-icons/md';
-import { MdOutlineWhatshot } from 'react-icons/md';
+import { BiCoffeeTogo } from 'react-icons/bi';
 
 const ViewCounter = ({ id }) => {
   const [viewCount, setViewCount] = useState('');
@@ -29,7 +23,7 @@ const ViewCounter = ({ id }) => {
 
   return (
     <div className="flex flex-row items-center text-sm font-normal text-gray-700">
-      <MdOutlineWhatshot className="mr-1 text-black" />
+      <BiCoffeeTogo className="mr-1 text-gray-900" />
       {viewCount ? Number(viewCount).toLocaleString('en-US') : `---`} views
     </div>
   );
