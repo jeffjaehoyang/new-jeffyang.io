@@ -22,10 +22,10 @@ export const Image = styled.figure`
 `;
 
 export const Title = styled.h3`
-  ${tw`flex flex-col mb-4 font-semibold sm:items-center sm:justify-between sm:flex-row sm:text-xl`};
+  ${tw`flex flex-col font-semibold sm:items-center sm:justify-between sm:flex-row sm:text-xl`};
 `;
 
-export const Description = styled.p``;
+export const Description = styled.div``;
 
 export const Date = styled.h3`
   ${tw`text-xs`};
