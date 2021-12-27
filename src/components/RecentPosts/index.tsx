@@ -1,6 +1,6 @@
 import Button from 'components/ui/Button';
 import Container from 'components/ui/Container';
-import InfoBlock from 'components/ui/InfoBlock';
+import RecentPostCard from 'components/ui/RecentPostCard';
 import TitleSection from 'components/ui/TitleSection';
 import { motion } from 'framer-motion';
 import { graphql, Link, useStaticQuery } from 'gatsby';
@@ -80,7 +80,7 @@ const RecentPosts: React.FC = () => {
             <Styled.PostItem key={id}>
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 1 }}>
                 <Link to={slug}>
-                  <InfoBlock
+                  <RecentPostCard
                     title={title}
                     description={description}
                     tags={tags}

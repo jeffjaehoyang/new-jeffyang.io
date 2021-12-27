@@ -4,7 +4,7 @@ import { MdOutlineFiberNew, MdOutlineFiberPin } from 'react-icons/md';
 
 import * as Styled from './styles';
 
-interface Props extends Styled.StyledProps {
+interface Props {
   title: string;
   description: string;
   tags: Array<string>;
@@ -23,14 +23,14 @@ const getDaysDifference = (dt1: Date, dt2: Date) => {
   return Math.round(diffDays);
 };
 
-const InfoBlock: React.FC<Props> = ({ title, description, tags, date, center, readingTime, slug }) => (
-  <Styled.InfoBlock center={center}>
+const RecentPostCard: React.FC<Props> = ({ title, description, tags, date, readingTime, slug }) => (
+  <Styled.RecentPostCard>
     {getDaysDifference(new Date(date), new Date()) > 30 ? (
       <MdOutlineFiberPin className="absolute text-3xl text-teal-600" style={{ top: -2, left: 5 }} />
     ) : (
       <MdOutlineFiberNew className="absolute text-3xl text-red-600" style={{ top: -2, left: 5 }} />
     )}
-    <Styled.Wrapper center={center}>
+    <Styled.Wrapper>
       <Styled.Title>{title}</Styled.Title>
       <Styled.Content>{description}</Styled.Content>
       <Styled.Date>
@@ -43,7 +43,7 @@ const InfoBlock: React.FC<Props> = ({ title, description, tags, date, center, re
         ))}
       </Styled.Tags>
     </Styled.Wrapper>
-  </Styled.InfoBlock>
+  </Styled.RecentPostCard>
 );
 
-export default InfoBlock;
+export default RecentPostCard;

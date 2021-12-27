@@ -1,21 +1,16 @@
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
 
-export interface StyledProps {
-  center?: boolean;
-}
-
-export const InfoBlock = styled.div<StyledProps>`
-  ${tw`relative flex flex-col p-4 text-indigo-900 bg-white border-2 border-gray-300 rounded-lg`};
-  ${({ center }) => center && tw`items-center`};
+export const RecentPostCard = styled.div`
+  ${tw`relative flex flex-col p-4 text-indigo-900 bg-white border-2 border-gray-200 rounded-lg`};
 `;
 
 export const Icon = styled.span`
   ${tw`flex items-center justify-center w-10 h-10 mb-2 text-indigo-500 border border-teal-400 rounded-full`};
 `;
 
-export const Wrapper = styled.div<StyledProps>`
-  ${({ center }) => center && tw`text-center`};
+export const Wrapper = styled.div`
+  ${tw``};
 `;
 
 export const Title = styled.h3`
