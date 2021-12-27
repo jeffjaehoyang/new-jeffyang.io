@@ -6,20 +6,21 @@ title: 'About Me'
 ### Recording life, code, and passion.
 
 Hey, I'm Jeff 👋. Welcome to my personal corner of the internet! I created this blog for myself to freely share thoughts and document my progress as a software engineer. I have benefited immensely from the generous and welcoming programming community who share their knowledge with others. I hope to replicate that learning experience for others through this blog!
+<br></br>
 
 #### Where am I from?
 
-I was born and raised in **Seoul, South Korea**. Currently, I live in the **Greater Chicago Area**.
+I was born and raised in **Seoul, South Korea**. Currently, I live in the **Greater Chicago Area**. After graduation, I will be moving to **New York City**.
 <br></br>
 
 #### What's my job?
 
-I am currently a student studying computer science at **Northwestern University**. I will be joining **Meta (Facebook)** as a software engineer after I graduate.
+I am currently a senior at **Northwestern University** studying computer science. I will be joining **Meta (Facebook)** as a software engineer after I graduate.
 <br></br>
 
 #### What kinds of professional experience do I have?
 
-I was previously a software engineering intern at [Meta (Facebook)](https://www.faebook.com), [Knowru](https://www.knowru.com), [Esri](https://www.esri.com/en-us/home), and [Fumi](https://fumi.co.kr/main/home/home). I worked on the front-end and back-end of various projects, using technologies such as **React.js, Redux, Ember.js, Angular.js, Hack/PHP, Django, Flask, AWS, GraphQL, MySQL, and PostgreSQL**.
+I was previously a software engineering intern at [Meta (Facebook)](https://www.faebook.com), [Knowru](https://www.knowru.com), [Esri](https://www.esri.com/en-us/home), and [Fumi](https://fumi.co.kr/main/home/home). I worked on the front-end and back-end of various projects, using technologies such as **React.js, Redux, Hack/PHP, Django, AWS, GraphQL, MySQL, and PostgreSQL**.
 <br></br>
 
 #### When did I start programming?
@@ -34,5 +35,5 @@ I love to build and create software & products that impact the world in a positi
 
 #### What technologies interest me?
 
-I am still in the process of exploring many different areas of software engineering. So far, I've found passion in delivering high quality end-products to users, as well as the art of crafting beautiful and readable code for us engineers.
-I especially enjoy exploring various web technologies. I love how the technologies related to the web are rapidly developing and constantly changing for the better. I'm also interested in scalable software systems and the infrastructure work that support products used world-wide by millions. Bottom-line: still have lots to learn 😉
+I am still in the process of exploring many different areas of software engineering. So far, I've found passion in delivering high quality end-products to users and in the art of finding the right balance between business and engineering - although ultimately, I believe that *software engineers also exist to add value to businesses*.
+I especially enjoy exploring web technologies. I love how the technologies related to the web are rapidly developing and constantly changing for the better. Bottom-line: still have lots to learn 😉
