@@ -87,7 +87,7 @@ const Guestbook: React.FC = () => {
         </Styled.Header>
         <Styled.GuestbookForm>
           <div className="text-xl font-bold">Sign the Guestbook</div>
-          <div className="mb-2">Share a message for a future visitor of my site.</div>
+          <div className="mb-2">Share a message for future visitors of my site.</div>
           {user ? (
             <form>
               <div className="flex flex-row items-center justify-between">
@@ -133,9 +133,9 @@ const Guestbook: React.FC = () => {
         </Styled.GuestbookForm>
         <div className="text-sm">
           This guestbook was inspired by{' '}
-          <a className="cursor-pointer" target="_blank" href="https://leerob.io">
+          <a className="cursor-pointer" target="_blank" href="https://leerob.io/guestbook">
             {' '}
-            Lee Robinson's guestbook.
+            Lee Rob's guestbook.
           </a>
         </div>
         <Styled.GuestbookPosts>
