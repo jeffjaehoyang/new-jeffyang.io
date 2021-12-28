@@ -4,11 +4,14 @@ const { createFilePath } = require(`gatsby-source-filesystem`);
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   actions.setWebpackConfig({
     resolve: {
-      modules: [path.resolve(__dirname, `src`), `node_modules`]
+      modules: [path.resolve(__dirname, `src`), `node_modules`, 'browser', 'module', 'main']
     }
   });
-  if (stage === 'build-html') {
+  if (stage === 'develop-html' || stage === 'build-html') {
     actions.setWebpackConfig({
+      resolve: {
+        mainFields: ['main']
+      },
       module: {
         rules: [
           {

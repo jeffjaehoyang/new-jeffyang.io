@@ -1,12 +1,20 @@
 ---
 category: 'about section'
 title: 'About Me'
+subtitle: 'A little about myself'
 ---
+
 
 ### Recording life, code, and passion.
 
 Hey, I'm Jeff 👋. Welcome to my personal corner of the internet! I created this blog for myself to freely share thoughts and document my progress as a software engineer. I have benefited immensely from the generous and welcoming programming community who share their knowledge with others. I hope to replicate that learning experience for others through this blog!
-<br></br>
+
+<br />
+<div style="display: flex; align-items: center; margin-bottom: 10px;">
+    <a href="/resume" style="background: #d0d5ed; padding: 5px 10px 5px 10px; border-radius: 0.25rem; color: #3d366a;">See Resume &nbsp;👉</a>
+</div>
+<br />
+
 
 #### Where am I from?
 

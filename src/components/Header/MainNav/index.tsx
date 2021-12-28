@@ -17,16 +17,16 @@ const mainNavItems: MainNavItem[] = [
     slug: '/about-me/'
   },
   {
+    title: 'Guestbook',
+    slug: '/guestbook/'
+  },
+  {
     title: 'Blog',
     slug: '/blog/'
   },
   {
     title: 'Projects',
     slug: '/projects/'
-  },
-  {
-    title: 'Resume',
-    slug: '/resume/'
   }
 ];
 
