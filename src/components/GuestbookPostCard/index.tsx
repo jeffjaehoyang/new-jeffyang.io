@@ -1,6 +1,6 @@
 import { GuestbookPost, User } from 'components/Guestbook';
 import React, { Dispatch, SetStateAction } from 'react';
-import { RiDoubleQuotesL, RiDoubleQuotesR } from 'react-icons/ri';
+import { BsChatDots } from 'react-icons/bs';
 
 import { deletePost } from '../../lib/guestbook';
 import * as Styled from './styles';
@@ -22,9 +22,8 @@ const GuestbookPostCard: React.FC<Props> = ({ user, post, posts, setPosts }) => 
   return (
     <Styled.Wrapper>
       <Styled.Content>
-        <RiDoubleQuotesL className="mr-2" />
+        <BsChatDots className="hidden mr-2 sm:flex" />
         <span>{post.content}</span>
-        <RiDoubleQuotesR className="ml-2" />
       </Styled.Content>
       <Styled.MetaData>
         <span className="font-bold">{post.displayName}</span>

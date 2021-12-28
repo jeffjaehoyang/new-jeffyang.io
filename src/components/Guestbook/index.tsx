@@ -83,7 +83,8 @@ const Guestbook: React.FC = () => {
       <div className="flex flex-col">
         <TitleSection title={sectionTitle.title} subtitle={sectionTitle.subtitle} />
         <Styled.Header>
-          Leave a comment below. It could be anything – appreciation, information, wisdom, or even humor. Surprise me!
+          Feel free to drop a comment below :) It could really be anything – appreciation, advice, information, or even
+          random thoughts. Looking forward to reading them! 👻
         </Styled.Header>
         <Styled.GuestbookForm>
           <div className="text-xl font-bold">Sign the Guestbook</div>
@@ -108,7 +109,7 @@ const Guestbook: React.FC = () => {
                   {!isPosting ? (
                     <>
                       Sign
-                      <FaSignature className="ml-2" />
+                      <FaSignature className="ml-2 text-2xl" />
                     </>
                   ) : (
                     <Loader type="TailSpin" color="gray" height={25} width={25} />
