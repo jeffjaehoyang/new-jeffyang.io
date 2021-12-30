@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import tw from 'tailwind.macro';
 
 export const Footer = styled.footer`
-  ${tw`text-white bg-indigo-900`};
+  ${tw`p-4 text-white bg-indigo-900`};
 `;
 
 export const Links = styled.div`
@@ -18,5 +18,5 @@ export const Link = styled.a`
 `;
 
 export const Copyright = styled.div`
-  ${tw`flex justify-center w-full mt-4`}
+  ${tw`flex justify-center w-full mt-5`}
 `;
