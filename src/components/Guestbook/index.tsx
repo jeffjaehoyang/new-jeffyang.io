@@ -133,7 +133,7 @@ const Guestbook: React.FC = () => {
           )}
         </Styled.GuestbookForm>
         <div className="text-sm">
-          This guestbook was inspired by{' '}
+          This page was inspired by{' '}
           <a className="cursor-pointer" target="_blank" href="https://leerob.io/guestbook">
             {' '}
             Lee Rob's guestbook.
