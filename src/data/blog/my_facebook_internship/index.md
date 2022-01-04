@@ -26,40 +26,42 @@ Exactly a year later, in Fall 2020, I gathered the courage to contact the same r
 ![Facebook Recruiter Message on Piazza Careers](./facebook-piazza.png)
 
 ### Team Selection
-The team selection process for interns at Facebook is done in a manner so that both parties (i.e. the interns and the company) benefit from the internship program. A few months before the start date, interns are sent out a survey in which one can express interest in certain pillars within Facebook. Specific teams are not provided as options to select from, but interns can express interest in certain software engineering fields (e.g. machine learning, frontend engineering, backend engineering, etc) and can also declare
-interest specific app pillars (e.g. Instagram, Facebook, Oculus, WhatsApp, Messenger, etc). Once the surveys are submitted by interns, a mysterious script magically does the team matching. I can't speak for other interns, but from what I've seen and heard, the team matching script does a pretty good job of keeping both parties content. I was matched with Business Messaging Lead Gen Ads team. It's an ads product team that is business-facing, so I got to work on a product that was being used by
-small and big businesses world-wide. I felt like I was matched with a team that I could excel in.
+The team selection process for interns at Facebook is done in a manner so that both parties—the interns and company—benefit from the program. Few months prior to the internship, interns are given a survey through why they can express interest in certain pillars within Facebook. 
+
+Specific teams are NOT provided as options to select from, but interns can express interest in certain fields (e.g. machine learning, frontend engineering, backend engineering, etc) and app pillars (e.g. Instagram, Facebook, Oculus, WhatsApp, Messenger, etc). 
+
+Once the surveys are submitted, a mysterious script magically performs team matching. From what I experienced and heard from others, the team matching script does a pretty great job of satisfying both parties. 
+
+I was matched with the Business Messaging Lead Gen Ads, a business-facing ads product team. It was a product used by businesses worldwide, and at the time I was matched, I felt it was an assignment I could excel in.
+
 
 ### A Remote Internship
-Facebook decided to run its 2021 summer internship program in a fully remote capacity. Although my team was technically based in the Menlo Park office, I chose to work from the sunny city of Angels (Los Angeles)! It made sense as LA was in the same timezone as my team (PST), had more affordable rent, and had a lot to offer as a city (outdoor hikes, beautiful beaches, great restaurants - especially Korean ones). I had a roommate (a highschool friend) who was also working remotely as a software engineering intern at a different tech company, so we decided to rent an AirBnB over the summer.
+Due to the ongoing pandemic, the 2021 Summer Internship Program was fully remote. Although my team was based in Menlo Park, I chose to work from Los Angeles. It made the most sense as LA shares the same time zone, has more affordable rent, and offers a lot as a city, including outdoor hikes, beautiful beaches, and great restaurants—especially Korean ones. My roommate was also working remotely as a software engineer intern at a different tech company, so we decided to rent an AirBnB together.
 
 ![LA scenery](./la-scenery.jpeg)
 
-Working remotely meant that Facebook had to ship tech equipments out for interns to use.
+Working remotely meant that Facebook shipped is tech equipment to interns
 
 ![Facebook tech equipments](./facebook-equipments.jpeg)
 
-Not only that, Facebook sent out intern swags a few weeks before the internship started!
+Facebook also sent out intern swag a few weeks before the internship!
 
 ![Facebook swag](./facebook-swag.jpeg)
 
-I setup a nice home office for myself - having that ultrawide monitor was extremely helpful 😇.
+I set up a nice home office for myself — having that ultrawide monitor was extremely helpful. 😇
 
 ![Home office setup](./desk-setup.jpeg)
 
 ### Imposter Syndrome
-Imposter syndrome is loosely defined as doubting your abilities and feeling like a fraud - I've heard of it and read about it on so many different forums and communities online. For me personally, I've never had imposter until this point. As amazing as it felt to think that I'd be working at Facebook, the thought of working at one of the leading technology firms in the world was more daunting than I thought it'd be. I always had this idea
-that engineers working at companies like Facebook and Google were geniuses - I never thought I would belong at one of these companies. As the start date loomed around the corner, I started to get slightly overwhelmed. *Would I be able to meet expectations at Facebook? What if it takes too long for me to learn the internal tools that are required for work? What if other engineers on the team think I don't deserve to be working with them?* I spent hours reading about imposter syndrome on various
-tech forums online - at least lots of people in tech seemed to be experiencing imposter syndrome. I saw lots of advice along the lines of *"There's a reason why they hired you. Believe in yourself"* - but I wasn't so sure.
+Imposter syndrome is defined as doubting your abilities and feeling like a fraud. I had heard of it and read about it on countless online forums, but had never experienced imposter syndrome until my internship with Facebook. As excited as I was to work at Facebook, the thought of working at one of the world’s leading tech firms was incredibly daunting. I always had the idea that engineers working at companies like Facebook and Google were geniuses — I never thought I would belong at one of these companies. As the start date loomed, I became slightly overwhelmed. Would I be able to meet expectations at Facebook? What if it takes too long for me to learn the internal tools that are required for work? What if other engineers on the team think I don't deserve to be working with them? I spent hours reading about imposter syndrome on various tech forums online, and it offered a sense of comfort to know that tons of others were experiencing the same thing I was. I read a lot of advice along the lines of "There's a reason why they hired you. Believe in yourself" — but I still wasn’t convinced.
 
 ### Ramping Up
-Like that, it started. In the first few days, I went through general training that provided helpful information on things like source control at Facebook (Facebook uses Mercurial instead of Git). Once I completed the general training, I had my first meeting with my intern manager. In the first meeting, we spent some time to get to know each other before diving into the details of the internship. My intern manager prepared a very detailed document on my intern project, including general onboarding documents on our team's codebase. We also went over goals of my internship and made sure that all expectations were clearly communicated. This included discussing preferred ways of receiving feedback, working hours, and more. In general, I felt very well supported by my intern manager, and the project definitely seemed doable within the given time frame (it was well scoped out by my manager beforehand). I set out 2 goals and communicated these very clearly with my manager:
+In the blink of an eye, I finally started my internship. The first few days consisted of orientation and general training on things like source control (Facebook uses Mercurial instead of Git). Once I completed general training, I had my first official meeting with my intern manager. We spent that time getting to know each other before diving into the details of the internship. My manager prepared a very detailed document on my intern project, including general onboarding documents on our team's codebase. We also went over my goals and KPIs, making sure that all expectations were clearly communicated. This included preferred ways of receiving feedback, working hours, and more. In general, I felt very supported by my intern manager, and the project was definitely doable within the given time frame (it was well scoped out by my manager beforehand). I outlined 2 goals for myself and communicated these very clearly to my manager:
 
-* I wanted to receive a return offer at the end of the internship
-* I wanted to be able to get to the level where I can confidently review other team member's code, and approve it (at Facebook, only one reviewer's approval is needed to ship code to production)
+* To receive a return offer at the end of the internship
+* To get to the level where I could confidently review another team member's code and approve it (at Facebook, only one person needs to review and approve code to ship it to production).
 
-To get used to the vast codebase that I was being thrown into, I was given a few starter tasks which gave me just the right amount of exposure to get started on exploring the codebase by myself without feeling too overwhelmed. I was able to complete the starter tasks in a few days. Once I was done with them, I moved on to the actual intern project milestones. By this point, I was starting to feel increasingly confident that I would be able to handle the work assigned to me.
-It also helped to have a team where everyone seemed to genuinely want me to succeed.
+To familiarize myself with Facebook’s vast codebase, I was given a few starter tasks to give me just the right amount of exposure without becoming overwhelmed. I completed the starter tasks in a few days. Once I was finished, I moved on to the actual intern project milestones. By this point, I was feeling increasingly confident that I would be able to handle the work assigned to me. It also helped to have a supportive team who genuinely wanted me to succeed.
 
 ### Not Just an Intern
 At Facebook, I never felt like I was an "intern". I had full access to the gigantic monorepo (yes, Facebook keeps all its code in a single repo), attended all the meetings with full time engineers, did code reviews, voiced out my opinions on our team's products, and had full control over my working schedule (working hours were extremely flexible even as an intern). The project that I worked on over the summer was a full-stack project, using technologies such as React for frontend and Hack/PHP for backend logic (yes, a lot of Facebook's backend code are written in Hack/PHP, especially for product teams). I was off to a smooth start because I had quite a bit of previous experience with React. Although I never had any experience with Hack/PHP, it was not too difficult to learn as it was quite similar to other programming languages that I was already familiar with. I was able to finish my intern project in the first 7 weeks. Because I had a few weeks left, I drafted a proposal for my own mini-project that would expand on the project that I had already completed. Once I got my team's support on my proposed project, I worked with the product designer, product manager, and the content designer to actually implement the project. What I loved about interning at Facebook was that I contributed to high-impact projects. As an example, the feature that I built out was a highly requested feature by high-profile customers such as AT&T and Lexus.

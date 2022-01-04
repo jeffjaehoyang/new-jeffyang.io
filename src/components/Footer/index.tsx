@@ -16,7 +16,7 @@ const Footer: React.FC = () => (
           <SiLinkedin className="w-6 h-6" />
         </Styled.Link>
       </Styled.Links>
-      <Styled.Copyright>© 2021 by Jeff Yang </Styled.Copyright>
+      <Styled.Copyright>© 2022 by Jeff Yang </Styled.Copyright>
       <Styled.Copyright>
         <a href="https://www.buymeacoffee.com/jjeffyang" target="_blank">
           <img
