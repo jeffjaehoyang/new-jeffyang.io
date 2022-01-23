@@ -17,15 +17,6 @@ const Footer: React.FC = () => (
         </Styled.Link>
       </Styled.Links>
       <Styled.Copyright>© 2022 by Jeff Yang </Styled.Copyright>
-      <Styled.Copyright>
-        <a href="https://www.buymeacoffee.com/jjeffyang" target="_blank">
-          <img
-            src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
-            alt="Buy Me A Coffee"
-            style={{ height: 30, width: 100 }}
-          />
-        </a>
-      </Styled.Copyright>
     </Container>
   </Styled.Footer>
 );
