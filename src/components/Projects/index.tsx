@@ -69,7 +69,7 @@ const Projects: React.FC = () => {
 
           return (
             <Styled.PostItem key={id}>
-              <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 1 }}>
+              <motion.div whileHover={{ scale: 1.01 }} whileTap={{ scale: 1 }}>
                 <ProjectsCard
                   projectName={projectName}
                   projectDescription={projectDescription}
