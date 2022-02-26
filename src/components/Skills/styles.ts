@@ -24,7 +24,7 @@ export const SkillWrapper = styled.div`
 export const StackTitle = styled.div`
   ${tw`mb-2 font-bold`}
   width: max-content;
-  background: linear-gradient(120deg, #fff59d 0%, #fff59d 100%);
+  background: linear-gradient(120deg, #edf2b9 0%, #edf2b9 100%);
   background-repeat: no-repeat;
   background-size: 100% 40%;
   background-position: 0 80%;

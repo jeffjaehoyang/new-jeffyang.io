@@ -90,25 +90,25 @@ const Posts: React.FC = () => {
           return (
             <Styled.Post key={id}>
               <Link to={slug}>
-                <motion.div whileHover={{ scale: 1.01 }} whileTap={{ scale: 1 }}>
-                  <Styled.Card>
-                    <Styled.Content>
-                      <Styled.Title>
-                        {title}
-                        <ViewCounter id={slug.split('/')[2]} />
-                      </Styled.Title>
-                      <Styled.Description>{description}</Styled.Description>
-                      <Styled.DateAndReadingTime>
-                        {date} • {readingTime.text}
-                      </Styled.DateAndReadingTime>
-                      <Styled.Tags>
-                        {tags.map((item) => (
-                          <Styled.Tag key={item}>{item}</Styled.Tag>
-                        ))}
-                      </Styled.Tags>
-                    </Styled.Content>
-                  </Styled.Card>
-                </motion.div>
+                {/* <motion.div whileHover={{ scale: 1.01 }} whileTap={{ scale: 1 }}> */}
+                <Styled.Card>
+                  <Styled.Content>
+                    <Styled.Title>
+                      {title}
+                      <ViewCounter id={slug.split('/')[2]} />
+                    </Styled.Title>
+                    <Styled.Description>{description}</Styled.Description>
+                    <Styled.DateAndReadingTime>
+                      {date} • {readingTime.text}
+                    </Styled.DateAndReadingTime>
+                    <Styled.Tags>
+                      {tags.map((item) => (
+                        <Styled.Tag key={item}>{item}</Styled.Tag>
+                      ))}
+                    </Styled.Tags>
+                  </Styled.Content>
+                </Styled.Card>
+                {/* </motion.div> */}
               </Link>
             </Styled.Post>
           );

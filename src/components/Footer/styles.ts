@@ -18,5 +18,5 @@ export const Link = styled.a`
 `;
 
 export const Copyright = styled.div`
-  ${tw`flex justify-center w-full mt-5`}
+  ${tw`flex justify-center w-full mt-5 text-xs`}
 `;
