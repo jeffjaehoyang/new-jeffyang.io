@@ -7,7 +7,7 @@ subtitle: 'A little about myself'
 
 ### Recording life, code, and passion.
 
-Hey, I'm Jeff 👋. Welcome to my personal corner of the internet! I created this blog for myself to freely share thoughts and document my progress as a software engineer. I have benefited immensely from the generous and welcoming programming community who share their knowledge with others. I hope to replicate that learning experience for others through this blog!
+Hey, I'm Jeff 👋 Welcome to my personal corner of the internet! I created this blog for myself to freely share thoughts and document my progress as a software engineer. I have benefited immensely from the generous and welcoming programming community who share their knowledge with others. I hope to replicate that learning experience for others through this blog!
 
 <br />
 <div style="display: flex; align-items: center; margin-bottom: 12px;">
