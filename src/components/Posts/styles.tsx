@@ -10,7 +10,7 @@ export const Post = styled.div`
 `;
 
 export const Card = styled.div`
-  ${tw`flex flex-col w-full h-full mb-10 overflow-hidden`};
+  ${tw`flex flex-col w-full mb-10 overflow-hidden`};
 `;
 
 export const Content = styled.div`
@@ -22,13 +22,15 @@ export const Image = styled.figure`
 `;
 
 export const Title = styled.div`
-  ${tw`flex flex-col font-semibold sm:items-center sm:justify-between sm:flex-row sm:text-xl`};
+  ${tw`flex flex-col font-semibold sm:items-center sm:justify-between sm:flex-row text-lg sm:text-xl`};
 `;
 
-export const Description = styled.div``;
+export const Description = styled.div`
+  ${tw`text-sm sm:text-md`};
+`;
 
 export const DateAndReadingTime = styled.div`
-  ${tw`flex flex-row items-center text-xs`};
+  ${tw`flex flex-row text-gray-800 items-center text-xs`};
 `;
 
 export const Tags = styled.div`
@@ -36,7 +38,7 @@ export const Tags = styled.div`
 `;
 
 export const Tag = styled.span`
-  ${tw`mr-2 text-xs text-indigo-900`}
+  ${tw`mr-2 text-sm sm:text-md text-indigo-900`}
   width: max-content;
   background: linear-gradient(120deg, #edf2b9 0%, #edf2b9 100%);
   background-repeat: no-repeat;

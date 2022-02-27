@@ -1,7 +1,7 @@
 ---
 category: 'blog'
 cover: './fumi_startup_two.png'
-title: 'Working at an Early Stage Startup - Part Two'
+title: 'Working at an Early Stage Startup (Pt. 2)'
 description: 'What I learned working at an early stage startup - the engineering side'
 date: '2021-03-13'
 tags: ['Personal Reflection']
