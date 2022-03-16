@@ -14,6 +14,12 @@ body {
   list-style: disc;
 }
 
+.prose ul > li::before {
+  background-color: #4d4d4d !important;
+  width: 5px;
+  height: 5px;
+}
+
 .format-html a {
   color: #4183c4;
   text-decoration: none;

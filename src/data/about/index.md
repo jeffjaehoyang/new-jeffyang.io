@@ -7,7 +7,9 @@ subtitle: 'A little about myself'
 
 ### Recording life, code, and passion.
 
-Hey, I'm Jeff 👋  Welcome to my personal corner of the internet! I created this blog for myself to freely share thoughts and document my progress as a software engineer. I have benefited immensely from the generous and welcoming programming community who share their knowledge with others. I hope to replicate that learning experience for others through this blog!
+Hey, I'm Jeff 👋
+
+Welcome to my personal corner of the internet! I created this blog for myself to freely share thoughts and document my progress as a software engineer. I have benefited immensely from the generous and welcoming programming community who share their knowledge with others. I hope to replicate that learning experience for others through this blog!
 
 <br />
 <div style="display: flex; align-items: center; margin-bottom: 12px;">
@@ -23,7 +25,7 @@ I was born and raised in **Seoul, South Korea**. Currently, I live in the **Grea
 
 #### What's my job?
 
-I am currently a senior at **Northwestern University** studying computer science. I will be joining **Meta (Facebook)** as a software engineer after I graduate.
+I am a recent graduate from **Northwestern University** with a degree in computer science. I will be joining **Meta (Facebook)** as a software engineer in New York City.
 <br></br>
 
 #### What kinds of professional experience do I have?
