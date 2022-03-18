@@ -15,7 +15,7 @@ body {
 }
 
 .prose ul > li::before {
-  background-color: #4d4d4d !important;
+  background-color: #616164 !important;
   width: 5px;
   height: 5px;
 }

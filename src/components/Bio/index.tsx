@@ -46,7 +46,7 @@ const Bio: React.FC = () => {
         <p>
           Written by <b>Jeff Yang</b>
         </p>
-        <p>I blog about software development, ideas, and my daily journey as an aspiring software engineer.</p>
+        <p>I blog about software development, ideas, and my daily journey as a learner & software engineer.</p>
       </Styled.BioInfo>
     </Styled.Bio>
   );
