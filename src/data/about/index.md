@@ -13,7 +13,7 @@ Welcome to my personal corner of the internet! I created this blog for myself to
 
 <br />
 <div style="display: flex; align-items: center; margin-bottom: 12px;">
-    <a href="/resume" style="background: #d0d5ed; padding: 5px 10px 5px 10px; border-radius: 0.25rem; color: #3d366a;">See Resume &nbsp;➩</a>
+    <a href="/resume" style="background: #d0d5ed; padding: 5px 10px 5px 10px; border-radius: 0.25rem; color: #3d366a;">See Resume &nbsp;📝</a>
 </div>
 <br />
 
