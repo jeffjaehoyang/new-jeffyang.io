@@ -30,7 +30,7 @@ I am a recent graduate from **Northwestern University** with a degree in compute
 
 #### What kinds of professional experience do I have?
 
-I was previously a software engineering intern at [Meta (Facebook)](https://www.faebook.com), [Knowru](https://www.knowru.com), [Esri](https://www.esri.com/en-us/home), and [Fumi](https://fumi.co.kr/main/home/home). I worked on the front-end and back-end of various projects, using technologies such as **React.js, Redux, Hack/PHP, Django, AWS, GraphQL, MySQL, and PostgreSQL**.
+I was previously a software engineering intern at [Meta (Facebook)](https://www.meta.com), [Knowru](https://www.knowru.com), [Esri](https://www.esri.com/en-us/home), and [Fumi](https://fumi.co.kr/main/home/home). I worked on the front-end and back-end of various projects, using technologies such as **React.js, Redux, Hack/PHP, Django, AWS, GraphQL, MySQL, and PostgreSQL**.
 <br></br>
 
 #### When did I start programming?
