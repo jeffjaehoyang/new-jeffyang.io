@@ -20,12 +20,16 @@ Welcome to my personal corner of the internet! I created this blog for myself to
 
 #### Where am I from?
 
-I was born and raised in **Seoul, South Korea**. Currently, I live in the **Greater Chicago Area**. After graduation, I will be moving to **New York City**.
+I was born and raised in **Seoul, South Korea** 🇰🇷
+
+I attended Northwestern University in **Evanston, IL** 🇺🇸
+
+I am based in **New York City** for work 🍎
 <br></br>
 
 #### What's my job?
 
-I am a recent graduate from **Northwestern University** with a degree in computer science. I will be joining **Meta (Facebook)** as a software engineer in New York City.
+I will be joining **Meta (Facebook)**'s NYC office as a software engineer.
 <br></br>
 
 #### What kinds of professional experience do I have?
