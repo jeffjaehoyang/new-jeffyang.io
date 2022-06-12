@@ -18,13 +18,13 @@ Welcome to my personal corner of the internet! I created this blog for myself to
 <br />
 
 
-#### Where am I from?
+#### Where am I from? 
 
-I was born and raised in **Seoul, South Korea** 🇰🇷
+Born and raised in **Seoul** 🇰🇷
 
-I attended Northwestern University in **Evanston, IL** 🇺🇸
+Attended Northwestern University in **Evanston** 🇺🇸
 
-I am based in **New York City** for work 🍎
+Working in **New York City** 🍎
 <br></br>
 
 #### What's my job?
