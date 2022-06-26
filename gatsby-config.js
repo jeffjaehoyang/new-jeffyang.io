@@ -142,8 +142,8 @@ module.exports = {
         name: `Personal Blog by Jeff Yang`,
         short_name: `jeffyang.io`,
         start_url: `/`,
-        background_color: `#3b366a`,
-        theme_color: `#3b366a`,
+        background_color: `#2c4365`,
+        theme_color: `#2c4365`,
         display: `minimal-ui`,
         icon: `src/assets/images/icon.png`
       }
