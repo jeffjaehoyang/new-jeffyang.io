@@ -60,7 +60,7 @@ const Experience: React.FC = () => {
     <Container section>
       <TitleSection title={sectionTitle.title} subtitle={sectionTitle.subtitle} />
       <a
-        className="mb-4 text-indigo-700 underline"
+        className="mb-4 text-blue-700 underline"
         href="https://www.dropbox.com/s/5f0yjzryv795q57/jeff-public-resume.pdf?dl=0"
         target="_blank"
       >

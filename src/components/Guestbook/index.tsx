@@ -102,7 +102,7 @@ const Guestbook: React.FC = () => {
                   onChange={handlePostContentChange}
                 />
                 <div
-                  className="flex flex-row items-center justify-center px-3 py-2 text-white bg-indigo-900 rounded-md cursor-pointer"
+                  className="flex flex-row items-center justify-center px-3 py-2 text-white bg-blue-900 rounded-md cursor-pointer"
                   style={{ minWidth: '74px' }}
                   onClick={handleSubmit}
                 >

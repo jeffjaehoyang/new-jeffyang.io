@@ -13,7 +13,7 @@ Welcome to my personal corner of the internet! I created this blog for myself to
 
 <br />
 <div style="display: flex; align-items: center; margin-bottom: 12px;">
-    <a href="/resume" style="background: #d0d5ed; padding: 5px 10px 5px 10px; border-radius: 0.25rem; color: #3d366a;">See Resume &nbsp;📝</a>
+    <a href="/resume" style="background: #dbeafe; padding: 5px 10px 5px 10px; border-radius: 0.25rem; color: #3d366a;">See Resume &nbsp;📝</a>
 </div>
 <br />
 
@@ -22,14 +22,14 @@ Welcome to my personal corner of the internet! I created this blog for myself to
 
 Born and raised in **Seoul** 🇰🇷
 
-Attended Northwestern University in **Evanston** 🇺🇸
+Went to college in **Evanston** 🇺🇸
 
 Working in **New York City** 🍎
 <br></br>
 
 #### What's my job?
 
-I will be joining **Meta (Facebook)**'s NYC office as a software engineer.
+I am a software engineer at **Meta**.
 <br></br>
 
 #### What kinds of professional experience do I have?

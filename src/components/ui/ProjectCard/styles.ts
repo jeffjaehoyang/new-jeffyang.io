@@ -6,7 +6,7 @@ export interface StyledProps {
 }
 
 export const ProjectCard = styled.div<StyledProps>`
-  ${tw`flex flex-col p-4 mx-3 my-4 text-indigo-900 bg-white border-2 border-gray-300 rounded-lg`};
+  ${tw`flex flex-col p-4 mx-3 my-4 text-blue-900 bg-white border-2 border-gray-300 rounded-lg`};
   ${({ center }) => center && tw`items-center`};
 `;
 
@@ -15,7 +15,7 @@ export const TagsAndIcons = styled.div`
 `;
 
 export const Icon = styled.span`
-  ${tw`flex items-center justify-center w-8 h-8 pt-4 mt-auto text-indigo-500 border border-purple-400 rounded-full`};
+  ${tw`flex items-center justify-center w-8 h-8 pt-4 mt-auto text-blue-500 border border-purple-400 rounded-full`};
 `;
 
 export const Icons = styled.div`
@@ -31,7 +31,7 @@ export const Title = styled.h3`
 `;
 
 export const Content = styled.p`
-  ${tw`mt-1 text-sm text-indigo-900`};
+  ${tw`mt-1 text-sm text-blue-900`};
 `;
 
 export const Tags = styled.div`
@@ -39,9 +39,9 @@ export const Tags = styled.div`
 `;
 
 export const Tag = styled.span`
-  ${tw`px-2 py-1 mr-2 text-xs text-indigo-900 bg-indigo-100 border border-indigo-300 rounded-md`}
+  ${tw`px-2 py-1 mr-2 text-xs text-blue-900 bg-blue-100 border border-blue-300 rounded-md`}
 `;
 
 export const Date = styled.h3`
-  ${tw`pt-4 text-xs text-indigo-900`};
+  ${tw`pt-4 text-xs text-blue-900`};
 `;

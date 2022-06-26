@@ -32,12 +32,12 @@ const ProjectsCard: React.FC<Props> = ({
         </Styled.Tags>
         <Styled.Icons>
           {projectLink && (
-            <a href={projectLink} className={'text-indigo-900'} target="_blank">
+            <a href={projectLink} className={'text-blue-900'} target="_blank">
               <RiExternalLinkLine className="w-5 h-5" />
             </a>
           )}
           {githubRepo && (
-            <a href={githubRepo} className={'text-indigo-900'} target="_blank">
+            <a href={githubRepo} className={'text-blue-900'} target="_blank">
               <VscGithub className="w-5 h-5 ml-2" />
             </a>
           )}

@@ -23,7 +23,7 @@ export const Accordion: React.FC<AccordionProps> = ({ year, content }) => {
   return (
     <>
       <div className="flex flex-row items-center justify-between w-20">
-        <div className="text-xl font-bold text-indigo-900">{year}</div>
+        <div className="text-xl font-bold text-blue-900">{year}</div>
         <button className="cursor-pointer focus:outline-none" onClick={toggleAccordion}>
           {active ? (
             <BiChevronUpSquare className="ml-1 text-xl text-gray-700" />

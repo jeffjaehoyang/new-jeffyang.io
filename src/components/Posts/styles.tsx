@@ -14,7 +14,7 @@ export const Card = styled.div`
 `;
 
 export const Content = styled.div`
-  ${tw`text-indigo-900`};
+  ${tw`text-blue-900`};
 `;
 
 export const Image = styled.figure`
@@ -38,7 +38,7 @@ export const Tags = styled.div`
 `;
 
 export const Tag = styled.span`
-  ${tw`mr-2 text-sm sm:text-md text-indigo-900`}
+  ${tw`mr-2 text-sm sm:text-md text-blue-900`}
   width: max-content;
   background: linear-gradient(120deg, #edf2b9 0%, #edf2b9 100%);
   background-repeat: no-repeat;

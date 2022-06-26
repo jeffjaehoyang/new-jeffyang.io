@@ -3,11 +3,11 @@ import tw from 'tailwind.macro';
 
 export default createGlobalStyle`
   body {
-    ${tw`m-0 text-indigo-900`};
+    ${tw`m-0 text-blue-900`};
   }
 
   a {
-    ${tw`text-indigo-600 hover:text-indigo-700`};
+    ${tw`text-blue-600 hover:text-blue-700`};
   }
 
   p + p {

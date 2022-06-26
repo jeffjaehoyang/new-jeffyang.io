@@ -6,7 +6,7 @@ export const Header = styled.div`
 `;
 
 export const GuestbookForm = styled.div`
-  ${tw`flex flex-col w-full p-5 mt-2 mb-2 bg-indigo-100 border border-indigo-200 rounded-lg`}
+  ${tw`flex flex-col w-full p-5 mt-2 mb-2 bg-blue-100 border border-blue-200 rounded-lg`}
 `;
 
 export const GuestbookPosts = styled.div`

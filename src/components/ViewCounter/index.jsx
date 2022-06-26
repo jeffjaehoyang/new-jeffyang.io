@@ -23,7 +23,7 @@ const ViewCounter = ({ id }) => {
 
   return (
     <div className="flex flex-row justify-center items-center text-xs font-normal text-gray-800">
-      <BiCoffeeTogo className="ml-1 mr-1 text-pink-900 text-xs" />
+      <BiCoffeeTogo className="ml-1 mr-1 text-green-800 text-xs" />
       <span>{viewCount ? Number(viewCount).toLocaleString('en-US') : `---`} views</span>
     </div>
   );

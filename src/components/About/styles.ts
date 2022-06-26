@@ -10,9 +10,9 @@ export const NewsItem = styled.div`
 `;
 
 export const Date = styled.div`
-  ${tw`mr-4 text-indigo-400`}
+  ${tw`mr-4 text-blue-400`}
 `;
 
 export const Title = styled.h3`
-  ${tw`my-4 text-indigo-900`};
+  ${tw`my-4 text-blue-900`};
 `;
