@@ -22,7 +22,7 @@ Welcome to my personal corner of the internet! I created this blog for myself to
 
 Born and raised in **Seoul** 🇰🇷
 
-Went to college in **Evanston** 🇺🇸
+Went to college in **Evanston** 💨 
 
 Working in **New York City** 🍎
 <br></br>

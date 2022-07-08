@@ -26,7 +26,7 @@ const getDaysDifference = (dt1: Date, dt2: Date) => {
 const RecentPostCard: React.FC<Props> = ({ title, description, tags, date, readingTime, slug }) => (
   <Styled.RecentPostCard>
     {getDaysDifference(new Date(date), new Date()) > 30 ? (
-      <MdOutlineFiberPin className="absolute text-3xl text-teal-600" style={{ top: -2, left: 5 }} />
+      <MdOutlineFiberPin className="absolute text-3xl text-gray-600" style={{ top: -2, left: 5 }} />
     ) : (
       <MdOutlineFiberNew className="absolute text-3xl text-red-600" style={{ top: -2, left: 5 }} />
     )}
