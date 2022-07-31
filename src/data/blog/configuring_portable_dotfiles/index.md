@@ -110,3 +110,4 @@ That's it! Stow will create all the symlinks needed to ensure that your configur
 ## Conclusion
 What's so great about Stow is that you can keep *all* of your dotfiles in a single VCS repository. You can then push it up to Github or any other VCS cloud provider of your choice. Any time you want to set up your configuration files for the programs you care about, you simply need to download them from the cloud, and Stow them. As a software developer, I can't appreciate Stow enough for finally bringing all my dotfiles under control :) 
 
+You can check out my dotfiles repo [here](https://github.com/jeffjaehoyang/.dotfiles).
