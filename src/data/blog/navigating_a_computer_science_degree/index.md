@@ -1,6 +1,6 @@
 ---
 category: 'blog'
-cover: 'northwestern.jpeg'
+cover: './northwestern.png'
 title: 'Navigating a Computer Science Degree'
 description: 'Relection on my life as an undergraduate CS student & takeaways'
 date: '2022-03-19'
@@ -8,7 +8,7 @@ tags: ['Personal Reflection']
 published: true
 ---
 
-![Blog Post Thumbnail](./northwestern.jpeg)
+![Blog Post Thumbnail](./northwestern.png)
 
 I just completed my degree in computer science at [Northwestern University](https://www.northwestern.edu). Coming into college, I hadn't written a single line of code. Not even a line of "hello world". I never saw myself majoring in a science/engineering field. Throughout my middle school and high school life, I always considered myself more gifted in things like 
 public speech and debate - so naturally, I considered going into law, although it was more just a mere stream of thought than a decisive opinion. I came to Northwestern thinking that I'd study economics (because it seemed like the *safe* major to go with, for some reason) and international relations. 6 years and a half later (I took 2 years off due to mandatory military service in Korea and another half a year off due to COVID-19), here I am, with a degree in computer science and a full-time job at Meta (Facebook) secured. It wasn't easy, but I truly had an amazing experience at Northwestern. In this blog post, I want to jot down a few notes on how I navigated my transformative adventure into the world of computer science and technology. 

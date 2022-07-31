@@ -14,7 +14,7 @@ const Bio: React.FC = () => {
           title
         }
       }
-      placeholderImage: file(relativePath: { eq: "jaehoyang.jpg" }) {
+      placeholderImage: file(relativePath: { eq: "my-profile.png" }) {
         childImageSharp {
           fluid(maxWidth: 120) {
             ...GatsbyImageSharpFluid
