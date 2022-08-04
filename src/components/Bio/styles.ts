@@ -2,15 +2,17 @@ import styled from 'styled-components';
 import tw from 'tailwind.macro';
 
 export const Bio = styled.div`
-  ${tw`flex flex-row items-center justify-center mt-10 border-t border-b border-gray-200 w-full py-10`};
+  ${tw`flex flex-col justify-between items-center mt-10 bg-yellow-100 border-indigo-800 rounded-lg w-full px-2 py-8`};
+`;
+
+export const BioHeader = styled.div`
+  ${tw`flex w-full items-center justify-center font-bold italic`}
 `;
 
 export const BioPic = styled.div`
-  $ img {
-    ${tw`w-24 h-24 border-4 border-white rounded-full`};
-  }
+  ${tw`mt-4 mb-4`}
 `;
 
 export const BioInfo = styled.div`
-  ${tw`flex flex-col w-full`}
+  ${tw`flex flex-col items-center justify-center w-full`}
 `;

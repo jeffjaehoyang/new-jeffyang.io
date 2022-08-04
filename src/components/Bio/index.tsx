@@ -29,6 +29,9 @@ const Bio: React.FC = () => {
 
   return (
     <Styled.Bio>
+      <Styled.BioHeader>
+        <span>Thank you for reading!</span>
+      </Styled.BioHeader>
       <Styled.BioPic>
         <Img
           fluid={logoImage}
@@ -36,17 +39,15 @@ const Bio: React.FC = () => {
           style={{
             width: 100,
             height: 100,
-            borderRadius: '50%',
-            marginRight: 25,
-            border: '1px solid grey'
+            borderRadius: '50%'
           }}
         />
       </Styled.BioPic>
       <Styled.BioInfo>
-        <p>
+        <span>
           Written by <b>Jeff Yang</b>
-        </p>
-        <p>I blog about software development, ideas, and my daily journey as a learner & software engineer.</p>
+        </span>
+        <span>I blog about software development, ideas, and my daily journey as a learner & software engineer.</span>
       </Styled.BioInfo>
     </Styled.Bio>
   );
