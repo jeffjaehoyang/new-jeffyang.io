@@ -14,5 +14,5 @@ export const BioPic = styled.div`
 `;
 
 export const BioInfo = styled.div`
-  ${tw`flex flex-col items-center justify-center w-full`}
+  ${tw`flex flex-col items-center justify-center text-center w-full`}
 `;

@@ -47,7 +47,9 @@ const Bio: React.FC = () => {
         <span>
           Written by <b>Jeff Yang</b>
         </span>
-        <span>I blog about software development, ideas, and my daily journey as a learner & software engineer.</span>
+        <span className="italic text-sm">
+          I blog about software development, ideas, and my daily journey as a learner & software engineer.
+        </span>
       </Styled.BioInfo>
     </Styled.Bio>
   );
